@@ -1,0 +1,451 @@
+@charset "utf-8";
+*{margin: 0;padding: 0;box-sizing: border-box;}
+ul{list-style: none;}
+a{text-decoration: none; color: #333;}
+
+
+
+
+.nav{
+    width: 100%;
+    height: 60px;
+    z-index: 9;
+    position: fixed;
+    /* overflow: hidden; */
+    background-color: #ddd;
+}
+.nav .logo{
+    margin: 0.4%;
+    width: 100px;
+    height: 60px;
+    margin-left: 20px;
+}
+
+.nav.on{
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 1px 1px 7px 2px rgba(255, 255, 255, 0.219);
+}
+.nav label .btn{
+    transition: 1s;
+    position: relative;
+    right: 170px;
+}
+.nav .btn:hover li{
+    transition: 1s !important; 
+    color: orangered;
+}
+.nav .btn li{
+    position: relative;
+    float: left;
+    font-size: 14px;
+    letter-spacing: -4px;
+}
+
+#hamburger{display: none;}
+#hamburger + label{
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+    z-index: 2;
+}
+#hamburger:checked + label .btn{
+    transform: rotate(-45deg);
+}
+#hamburger:checked + label .btn li{
+    transform: rotate(-45deg);
+    letter-spacing: 2px;
+}
+.nav .list{
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    margin-left: 100%;
+    transition: 1s;
+}
+#hamburger:checked ~ .list{
+    margin-left: 0;
+}
+.nav .list ul{
+   position: absolute;
+   width: 100%;
+   height: 60px;
+   top: -50%;
+   left: 50%;
+   transform: translateY(-50%);
+   -webkit-transform: translateY(-50%);
+}
+
+.nav .list ul li{
+    display: inline-block;
+    margin: 0 1%;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    position: relative;
+}
+
+
+
+/* 모바일 */
+
+.m-nav{
+    display: none;
+    width: 100%;
+    height: 80px;
+    z-index: 99;
+    position: fixed;
+    overflow: hidden;
+}
+.m-nav .logo{
+    margin: 0.4%;
+    width: 100px;
+    height: 80px;
+    margin-left: 20px;
+}
+
+.m-nav.on{
+    background-color: rgba(255,255,255,0.4);
+    backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(100px);
+    /* background-color: rgba(255, 255, 255, 0.15); */
+    box-shadow: 1px 1px 7px 2px rgba(255, 255, 255, 0.219);
+    transition: 1s;
+    -webkit-transition: 1s;
+}
+.m-nav .btn{
+   width: 45px;
+   height: 45px;
+   overflow: hidden;
+   font-size: 0;
+   cursor: pointer;
+   position: absolute;
+    right: 1%;
+    top: 0;
+    transition: 1s;
+}
+.m-nav .btn:hover li{
+    background-color: #5ac268 !important;
+    transition: 1s !important; 
+    
+}
+.m-nav .btn li{
+    width: 15px;
+    height: 15px;
+    background-color: #000;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 0;
+    margin: 0;
+}
+
+
+#m-hamburger{display: none;}
+#m-hamburger + label{
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+    z-index: 2;
+}
+#m-hamburger:checked + label .btn{
+    transform: rotate(-455deg);
+}
+
+.m-nav .list{
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    line-height: 50px;
+    margin-left: 100%;
+    transition: 1s;
+    -webkit-transition: 1s;
+    
+}
+#m-hamburger:checked ~ .list{
+    margin-left: 0;
+}
+.m-nav .list ul{
+   position: absolute;
+   width: 100%;
+   height: 80px;
+   top: -50%;
+   left: 45%;
+   transform: translateY(-50%);
+   -webkit-transform: translateY(-50%);
+
+}
+
+
+.m-nav .list ul li{
+    display: inline-block;
+    margin: 0 1%;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    position: relative;
+}
+.m-nav .list ul li::after{
+    position: absolute;
+    content: "";
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: m-translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    border-radius: 50%;
+    opacity: 0;
+}
+.m-nav .list ul.on li::after{ /* js는 after가 안되기때문에 add클래스 사용하기*/
+    background-color: #fff;
+}
+.m-nav .list ul li:hover::after{
+    opacity: 1;
+    animation: jump 0.5s ease-in-out infinite;
+}
+@keyframes jump{
+    0%{transform: translateY(0px);}
+    50%{transform: translateY(-5px);}
+    /* 50%{transform: translateY(40px);} */
+    100%{transform: translateY(0px);}
+}
+.m-nav .list ul li a{
+    font-size: 20px;
+    /* font-family: 'Roboto-Light'; */
+    font-family: 'Roboto-Regular';
+    /* transform:skew(-0.01deg)  */
+}
+.m-nav .list ul li.on a{
+    color: #5ac268 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.work{
+    width: 100%;
+    height: 969px;
+    background-color:#f6f6f6eb;
+}
+.work .work-wrap{
+    width: 1040px;
+    height: 969px;
+    margin: 0 auto;
+    float: right;
+    margin-right: 170px;
+    background-color: #eee;
+}
+
+.work h1{
+    position: relative;
+    font-size: 40px;
+    text-align: center;
+    top: 350px;
+    left: -400px;
+    /* padding-top: 60px; */
+    /* padding-bottom: 60px; */
+}
+.work .content{
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 200px;
+} 
+.work .content .info{
+    float: left;
+    width: 30%;
+    height: 200px;
+    text-align: center;
+    line-height: 30px;
+    margin-right: 50px;
+    margin-top: 40px;
+}
+
+.work .content .imac{
+    float: left;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+}
+.work .item1 .imac{
+    margin-left: 50px;
+}
+
+.work h1.on{
+    position: fixed;
+}
+
+.work .content .info button{
+    margin-top: 10px;
+    background-color: #39c0f5;
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 30px;
+    border: 1px solid transparent;
+    text-align: center;
+    padding: 0 5px;
+    font-size: 12px;
+    letter-spacing: -1px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.work .content:nth-child(2) .info button{
+    color: #fff;
+}
+.work .content:nth-child(3) .info button{
+    background-color: #edeaab;
+}
+
+.work .item2 .info{
+    float: left;
+    width: 30%;
+    height: 200px;
+    text-align: center;
+    line-height: 30px;
+    margin-left: 100px;
+    margin-top: 40px;
+}
+
+.work .item2 .imac{
+    float: left;
+    width: 400px;
+    height: 400px;
+    margin-left: -50px;
+}
+
+.work .content h3{
+    color: #d7e6e8;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+/* 
+.work .right ul li .content span{
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+}
+.work .right ul li .content span::after{
+    content: "hover ↓";
+    font-size: 12px;
+    color: orangered;
+    font-weight: bold;
+    display: block;
+    margin-left:380px;
+    animation: hover 1.5s infinite linear;
+} */
+
+@keyframes hover {
+0%{transform: translate(-50%,0);}    
+25%{transform: translate(-50%,-5px);}
+50%{transform: translate(-50%,-10px);}
+75%{transform: translate(-50%,-5px);}
+100%{transform: translate(-50%,0px);}
+}
+ 
+.work .content .imac .screen{
+    background: #000;
+    border-radius: 3% 3% 0 0 / 5% 5% 0 0;
+    position: relative;
+    width: 100%;
+}
+  
+.work .content .imac .screen:before{
+    content: "";
+    display: block;
+    padding-top: 60%;
+}
+  
+.work .content .imac .line{
+    background: linear-gradient(90deg, #A6A6AA, #E1E2E4);
+    border-radius: 0 0 3% 3%/ 0 0 33.33% 33.33%;
+    position: relative;
+    width: 100%;
+}
+.work .content .imac .line::before {
+    content: "";
+    display: block;
+    padding-top: 9%;
+}
+
+.viewport{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 4%;
+    background: #333;
+}
+.leg{
+    margin: 0 auto;
+    position: relative;
+    width: 20%;
+}
+.leg::before {
+    content: "";
+    display: block;
+    padding-top: 46%;
+    background: linear-gradient(#7a7b80, #abacaf 26%, #d0d1d2 57%, #f2f2f2 76%, #e4e4e4 84%, #787878);
+}
+.foot{
+    position: relative;
+    width: 20%;
+    margin: 0 auto;
+    perspective: 180px;
+}
+.foot::before {
+    content: "";
+    display: block;
+    padding-top: 40%;
+    transform: rotateX(65deg);
+    transform-origin: center top;
+    background: linear-gradient(#7b7b7b, #7f7f7f 39%, #a6a6a6 53%, #ccc 67%, #aaa 86%, #eee 88%, #fff 95%, #a9a9a9 95%, #000);
+    border-radius: 0 0 10% 10% / 0 0 30% 30%;
+    box-shadow: 0 -10px 5px rgba(255, 255, 255, 0.1) inset, 0 -17px 6px rgba(0, 0, 0, 0.1) inset;
+}
+
+.imac .viewport {
+    transition: background-position 4s ease;
+    background-position: 0 0;
+    background-size: 100% auto;
+    overflow: hidden;
+    cursor: pointer;
+}
+.imac .screen:hover .viewport{
+    background-position: 0 100%;
+}
+.imac .viewport::after {
+    background: radial-gradient(circle at right bottom, transparent 75%, rgba(255, 255, 255, 0.05) 75%, transparent);
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}

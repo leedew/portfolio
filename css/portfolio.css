@@ -801,237 +801,6 @@ to   { right: 170px; }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .work{
-    width: 100%;
-    height: 100%;
-    background-color:#f6f6f6eb;
-}
-.work .work-wrap{
-    width: 1240px;
-    height: 969px;
-    margin: 0 auto;
-}
-.work .left{
-    width: 30%;
-    height: 100px;
-    float: left;
-}
-.work .left h1{
-    font-size: 40px;
-    top: 200px;
-}
-.work .left h1.on{
-    font-size: 40px;
-    position: fixed;
-}
-
-.work .right{
-    width: 70%;
-    height: 100%;
-    float: left;
-}
-.work .right ul li .info{
-    float: left;
-    width: 50%;
-    height: 404.79px;
-    text-align: center;
-    line-height: 30px;
-    padding-top: 150px;
-}
-.work .right ul li .info button{
-    margin-top: 10px;
-    background-color: #39c0f5;
-    width: 120px;
-    height: 30px;
-    line-height: 30px;
-    border-radius: 30px;
-    border: 1px solid transparent;
-    text-align: center;
-    padding: 0 5px;
-    font-size: 12px;
-    letter-spacing: -1px;
-    font-weight: bold;
-    cursor: pointer;
-}
-.work .right ul li:nth-child(1) .info button{
-    color: #fff;
-}
-.work .right ul li:nth-child(2) .info button{
-    background-color: #edeaab;
-}
-
-.work2 .right ul li:nth-child(1) .info button{
-    background-color: #009223;
-    color: #fff;
-}
-.work2 .right ul li:nth-child(2) .info button{
-    background-color: #ffa500;
-}
-
-.work .right ul li .content{
-    width: 50%;
-    float: left;
-}
-
-.work .right ul:nth-child(1) li{
-    margin-top: 30px;
-}
-.work .right ul li:nth-child(1) .content{
-    margin-bottom: 60px;
-}
-
-.work .right ul li .content h3{
-    color: #d7e6e8;
-    font-size: 50px;
-    margin-left: 30px;
-    display:inline-block;
-}
-.work .right ul li .content span{
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-}
-.work .right ul li .content span::after{
-    content: "hover ↓";
-    font-size: 12px;
-    color: orangered;
-    font-weight: bold;
-    display: block;
-    margin-left:380px;
-    animation: hover 1.5s infinite linear;
-}
-
-@keyframes hover {
-0%{transform: translate(-50%,0);}    
-25%{transform: translate(-50%,-5px);}
-50%{transform: translate(-50%,-10px);}
-75%{transform: translate(-50%,-5px);}
-100%{transform: translate(-50%,0px);}
-}
-
-.work .right .content .imac{
-    margin: 0 auto;
-    width: 400px;
-}
-  
-.work .right .content .imac .screen{
-    background: #000;
-    border-radius: 3% 3% 0 0 / 5% 5% 0 0;
-    position: relative;
-    width: 100%;
-}
-  
-.work .right .content .imac .screen:before{
-    content: "";
-    display: block;
-    padding-top: 60%;
-}
-  
-.work .right .content .imac .line{
-    background: linear-gradient(90deg, #A6A6AA, #E1E2E4);
-    border-radius: 0 0 3% 3%/ 0 0 33.33% 33.33%;
-    position: relative;
-    width: 100%;
-}
-.work .right .content .imac .line::before {
-    content: "";
-    display: block;
-    padding-top: 9%;
-}
-
-.viewport{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 0;
-    margin: 4%;
-    background: #333;
-}
-.leg{
-    margin: 0 auto;
-    position: relative;
-    width: 20%;
-}
-.leg::before {
-    content: "";
-    display: block;
-    padding-top: 46%;
-    background: linear-gradient(#7a7b80, #abacaf 26%, #d0d1d2 57%, #f2f2f2 76%, #e4e4e4 84%, #787878);
-}
-.foot{
-    position: relative;
-    width: 20%;
-    margin: 0 auto;
-    perspective: 180px;
-}
-.foot::before {
-    content: "";
-    display: block;
-    padding-top: 40%;
-    transform: rotateX(65deg);
-    transform-origin: center top;
-    background: linear-gradient(#7b7b7b, #7f7f7f 39%, #a6a6a6 53%, #ccc 67%, #aaa 86%, #eee 88%, #fff 95%, #a9a9a9 95%, #000);
-    border-radius: 0 0 10% 10% / 0 0 30% 30%;
-    box-shadow: 0 -10px 5px rgba(255, 255, 255, 0.1) inset, 0 -17px 6px rgba(0, 0, 0, 0.1) inset;
-}
-
-.imac .viewport {
-    transition: background-position 4s ease;
-    background-position: 0 0;
-    background-size: 100% auto;
-    overflow: hidden;
-    cursor: pointer;
-}
-  
-.imac .screen:hover .viewport{
-    background-position: 0 100%;
-}
-  
-.imac .viewport::after {
-    background: radial-gradient(circle at right bottom, transparent 75%, rgba(255, 255, 255, 0.05) 75%, transparent);
-    bottom: 0;
-    content: "";
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-} */
-
-
-
-
 /*디자인 작업 부분*/
 .design{
     width: 100%;
@@ -1266,50 +1035,34 @@ to   { right: 170px; }
         opacity: 0;
     }
 
-    .header{
-        width: 100%;
-    }
-    .header .header-wrap{
-        width: 100%;
-    }
-    .header .logo{
-        width: 20%;
-        margin: 0;
-        padding: 20px 0 0 10px;
-    }
-    .header .nav{
-        left: 0;
-        width:80%;
-    }
-    
-  
+
 
 
     /* home */
-    .header .home{
+    .home{
         width: 100%;
     }
-    .header .home .home-wrap{
+    .home .home-wrap{
         width: 100%;
     }
-    .header .home .home-wrap > p{
+    .home .home-wrap > p{
         font-size: 18px;
         bottom: 150px;
     }
-    .header .home .door{
+    .home .door{
         width: 100%;
         left: 0;
     }
-    .header .home .left .box{
+    .home .left .box{
         border-left: 40px solid #fff;
         border-top: 40px solid transparent;
         border-bottom: 40px solid transparent;
         padding-left: 10px;
     }
-    .header .home .center .down{
+    .home .center .down{
         left: 296px;
     }
-    .header .home .right .box{
+    .home .right .box{
         border-right: 40px solid #fff;
         padding-right: 10px;
     }
@@ -1321,6 +1074,8 @@ to   { right: 170px; }
         from{right:0;}
         to{right:165px;}
     }
+
+
 
 
     /* about 프로필*/

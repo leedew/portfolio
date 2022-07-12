@@ -89,6 +89,45 @@ $("document").ready(function(){
     })
 
     
+    // 터치스와이프
+    $("body").swipe({
+        swipe: function(event, direction){
+            if(direction == "up"){
+                // 마우스를 위로 올렸다면
+                // alert("위로") , 휴대폰 사용할때 손으로 위로 올린다고 생각하면됨
+                wheel_count++;
+                if(wheel_count > $(".section").length -1){
+                wheel_count = $(".section").length -1   
+                }
+            }else if(direction=="down"){
+                // alert("아래로")
+                wheel_count--;
+                if(wheel_count <0){
+                wheel_count = 0;
+                }
+            }else if(direction=="left"){
+                alert("왼쪽")
+            }else if(direction=="right"){
+                alert("오른쪽")
+            }
+            
+            if(wheel_count > 0){
+                $(".nav").fadeIn()
+            }else{
+                $(".nav").fadeOut()
+            }
+        
+            $("html, body").stop().animate({
+                scrollTop: $(".section").height()*wheel_count
+                // scrollTop: offset[wheel_count]
+            },1000)
+            // $(".nav ul li").removeClass("on").eq(wheel_count).addClass("on")
+            // $(".indicator ul li").removeClass("on").eq(wheel_count).addClass("on")
+        }
+    })
+
+
+
 
 
     $(".indicator ul li").click(function(){
@@ -100,24 +139,14 @@ $("document").ready(function(){
         $(".indicator ul li").removeClass("on").eq(wheel_count).addClass("on")
     })
 
-    // 메뉴 ->반응형
-    $(".side-nav .hamburger a").click(function(){
-        $(this).addClass("on")
-        $(".side").addClass("on")
-        $(".close").addClass("on")
+    // 네비
+    $(".nav .hamburger a, .side").click(function(e){
+        e.preventDefault()
+     })
+    $(".nav .hamburger a").click(function(){
+        $(".side").toggleClass("on")
+        $(".nav .hamburger a").toggleClass("on")
     })
-
-    $(".close").click(function(){
-        $(this).removeClass("on")
-        setTimeout(function(){
-
-            $(".side").removeClass("on")
-        },1200)
-        setTimeout(function(){
-            $(".side-nav .hamburger a").removeClass("on")
-        },1500)
-    })
-
 
 
     // home- 가운데 문

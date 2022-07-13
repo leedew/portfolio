@@ -135,8 +135,7 @@ html, body{overflow: hidden;}
     font-size: 1.3vw;
     font-weight: bold;
     position: absolute;
-    /* bottom: 60px; */
-    bottom: 5.5vh;
+    bottom: 60px;
     left: 50%;
     text-align: center;
     transform: translate(-60%,-50%) rotate(90deg);
@@ -162,28 +161,20 @@ html, body{overflow: hidden;}
     float: left;
 }
 .home .left .box{
-    width:0.2vw;
-    /* height: 500px; */
-    height: 54.11vh;
-    /* border-left: 50px solid #fff; */
-    border-left: 5.41vh solid #fff;
-    /* border-top: 40px solid transparent; */
-    border-top: 4.32vh solid transparent;
-    /* border-bottom: 40px solid transparent; */
-    border-bottom: 4.32vh solid transparent;
+    height: 500px;
+    border-left: 50px solid #fff;
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
     float: left;
-    /* padding-left: 20px; */
-    padding-left: 2.16vh;
+    padding-left: 20px;
 }
 .home .left .box:nth-child(2){
     border-top: 5.41vh solid transparent;
     border-bottom: 5.41vh solid transparent;
 }
 .home .left .box:nth-child(3){
-    /* border-top: 60px solid transparent; */
-    border-top: 6.49vh solid transparent;
-    /* border-bottom: 60px solid transparent; */
-    border-bottom: 6.49vh solid transparent;
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
 }
 .home .door .center{
     opacity: 0;
@@ -191,36 +182,27 @@ html, body{overflow: hidden;}
 }
 
 .home .center .shadow{
-    /* width:50px; */
-    width: 5.41vh;
-    /* height: 500px; */
-    height: 54.11vh;
+    width:50px;
+    height: 500px;
     float: left;
     background-color: rgb(65,64,75);
     box-shadow: -10px 5px 40px 40px rgb(65,64,75);
 }
 .home .center .whitedoor{
     float: left;
-    /* width: 264px; */
-    width: 28.57vh;
-    /* height: 500px; */
-    height: 54.11vh;
+    width: 264px;
+    height: 500px;
     background-color: #fff;
 }
 .home .center .whitedoor .blackdoor{
     float: left;
-    /* left: 65px; */
-    left: 7.05vh;
+    left: 64px;
     position: relative;
-    width: 0.2vw;
-    /* height: 500px; */
-    height: 54.11vh;
-    /* border-right: 200px solid #000; */
-    border-right: 21.64vh solid #000;
-    /* border-top: 60px solid transparent; */
-    border-top: 6.49vh solid transparent;
-    /* border-bottom: 60px solid transparent; */
-    border-bottom: 6.49vh solid transparent;
+    width: 1px;
+    height: 500px;
+    border-right: 200px solid #000;
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
     animation: blackdoor 6s linear infinite ;
     animation-fill-mode:both;
     transform-origin: right;
@@ -237,17 +219,12 @@ html, body{overflow: hidden;}
 .home .center .down{
     width: 0px;
     height: 0px;
-    /* border-top: 15px solid #fff; */
-    border-top: 1.62vh solid #fff;
-    /* border-left: 15px solid transparent; */
-    border-left: 1.62vh solid transparent;
-    /* border-right: 15px solid transparent; */
-    border-right: 1.62vh solid transparent;
+    border-top: 15px solid #fff;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
     position: absolute;
-    /* top: 560px; */
-    top: 54.1vh;
-    /* left: 360px; */
-    left: 38.96vh;
+    top: 500px;
+    left: 360px;
 }
 .home .door .right{
     float: left;
@@ -255,13 +232,10 @@ html, body{overflow: hidden;}
 
 .home .right .box{
     width:1px;
-    /* height: 500px; */
-    height: 54.11vh;
+    height: 500px;
     border-right: 50px solid #fff;
-    /* border-top: 60px solid transparent; */
-    border-top: 6.49vh solid transparent;
-    /* border-bottom: 60px solid transparent; */
-    border-bottom: 6.49vh solid transparent;
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
     float: left;
     padding-right: 20px;
 }
@@ -293,7 +267,6 @@ from { opacity: 1; }
 to   { opacity: 0; }
 }
 
-
 /* 오른쪽 문 */
 .home .door > .right{
     position: relative;
@@ -307,6 +280,9 @@ to   { opacity: 0; }
 from { right: 0; }
 to   { right: 170px; }
 }
+
+
+
 
 
 /* 인디케이터 */
@@ -336,11 +312,13 @@ to   { right: 170px; }
 /* 프로필 */
 .about{
     width: 100%;
-    height: 969px;
+    /* height: 969px; */
+    height: 104.87vh;
 }
 .about .about-wrap{
     width: 1240px;
-    height: 809px;
+    /* height: 809px; */
+    height: 87.55vh;
     background-color: #f1f2f3;
     border-radius: 50px;
     margin: 0 auto;
@@ -353,7 +331,7 @@ to   { right: 170px; }
 }
 .about .left{
     width: 620px;
-    height: 809px;
+    height: 87.55vh;
     float: left;
     border-right: 1px solid #000;
 }
@@ -378,7 +356,7 @@ to   { right: 170px; }
 .about .right{
     float: left;
     width: 620px;
-    height: 809px;
+    height: 87.55vh;
 }
 .about h3{
     padding-top: 30px;
@@ -1063,6 +1041,8 @@ to   { right: 170px; }
     .indicator{
         opacity: 0;
     }
+
+    /* nav */
     .nav .logo img{
         width: 50px;
         height: auto;
@@ -1085,9 +1065,6 @@ to   { right: 170px; }
     .side.on{
         left: 0px;
     }
-    .side ul{
-       margin-top: 50px;
-    }
     .side ul li{
         width: 100%;
         margin: 50px 0;
@@ -1098,7 +1075,6 @@ to   { right: 170px; }
     .side ul li:hover a{
         background-color: #d7e6e8;
     }
-
     .side ul li:hover a::before{
         color: #333;
     }
@@ -1109,20 +1085,19 @@ to   { right: 170px; }
         width: 100%;
     }
     .home .home-wrap > p{
-        bottom: 180px;
+        bottom: 270px;
         left: 55%;
-        font-size: 4.3vw;
+        font-size: 14px;
     }
     .home .door{
         position: absolute;
         width: 100%;
+        transform: translate(0,0);
+        top: 10%;
     }
     .home .left .box{
         border-left: 15px solid #fff;
-        border-top: 40px solid transparent;
-        border-bottom: 40px solid transparent;
         padding-left: 7px;
-        height: 400px;
     }
     .home .door .center{
         position: relative;
@@ -1130,7 +1105,6 @@ to   { right: 170px; }
     }
     .home .center .shadow{
         width:10px;
-        height: 400px;
         float: left;
         background-color: rgb(65,64,75);
         box-shadow: -10px 5px 40px 40px rgb(65,64,75);
@@ -1140,17 +1114,15 @@ to   { right: 170px; }
         height: 400px;
     }
     .home .center .whitedoor .blackdoor{
-        left: 51px;
         height: 400px;
-        border-right: 150px solid #000;
+        left: 70px;
+        border-right: 130px solid #000;
     }
     .home .center .down{
-        left:25%;
+        left: 40%;
         top: 400px;
-
     }
     .home .right .box{
-        height: 400px;
         border-right:15px solid #fff;
         padding-right: 7px;
     }
@@ -1171,6 +1143,7 @@ to   { right: 170px; }
     }
     .about .about-wrap{
         width:97%;
+        height: 87.55vh;
     }
     .about .left{
         float: none;

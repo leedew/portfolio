@@ -25,7 +25,7 @@ html, body{overflow: hidden;}
     margin-top: 30px;
     left: 50%;
     right: 50%;
-    z-index: 20;
+    z-index: 10;
     transform: translate(-50%,-20%);
 }
 .nav .logo img{
@@ -68,6 +68,7 @@ html, body{overflow: hidden;}
 }
 .side.on{
     left: 0px;
+
 }
 .side ul{
     width: 100%;
@@ -1061,7 +1062,7 @@ to   { right: 170px; }
         left: 0px;
     }
     .side ul{
-       margin-top: 100px;
+       margin-top: 50px;
     }
     .side ul li{
         width: 100%;
@@ -1088,12 +1089,13 @@ to   { right: 170px; }
         bottom: 80px;
     }
     .home .door{
+        position: absolute;
         width: 100%;
         left: 0;
-        transform: translate(1.5%,0);
+        transform: translate(5%,0);
     }
     .home .left .box{
-        border-left: 25px solid #fff;
+        border-left: 20px solid #fff;
         border-top: 40px solid transparent;
         border-bottom: 40px solid transparent;
         padding-left: 10px;
@@ -1106,10 +1108,10 @@ to   { right: 170px; }
         box-shadow: -10px 5px 40px 40px rgb(65,64,75);
     }
     .home .center .down{
-        left: 225px;
+        left: 205px;
     }
     .home .right .box{
-        border-right: 25px solid #fff;
+        border-right: 20px solid #fff;
         padding-right: 10px;
     }
     @keyframes left_move{

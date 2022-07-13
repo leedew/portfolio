@@ -224,7 +224,7 @@ html, body{overflow: hidden;}
     border-right: 15px solid transparent;
     position: absolute;
     top: 500px;
-    left: 360px;
+    left:29.5%;
 }
 .home .door .right{
     float: left;
@@ -312,13 +312,11 @@ to   { right: 170px; }
 /* 프로필 */
 .about{
     width: 100%;
-    /* height: 969px; */
-    height: 104.87vh;
+    height: 969px;
 }
 .about .about-wrap{
     width: 1240px;
-    /* height: 809px; */
-    height: 87.55vh;
+    height: 809px;
     background-color: #f1f2f3;
     border-radius: 50px;
     margin: 0 auto;
@@ -331,7 +329,7 @@ to   { right: 170px; }
 }
 .about .left{
     width: 620px;
-    height: 87.55vh;
+    height: 809px;
     float: left;
     border-right: 1px solid #000;
 }
@@ -356,7 +354,7 @@ to   { right: 170px; }
 .about .right{
     float: left;
     width: 620px;
-    height: 87.55vh;
+    height: 809px;
 }
 .about h3{
     padding-top: 30px;
@@ -1036,7 +1034,7 @@ to   { right: 170px; }
 
 
 @media screen and (max-width: 640px){
-
+    
     /* 인디케이터 */
     .indicator{
         opacity: 0;
@@ -1092,12 +1090,13 @@ to   { right: 170px; }
     .home .door{
         position: absolute;
         width: 100%;
-        transform: translate(0,0);
+        transform: translate(8%,0);
         top: 10%;
     }
     .home .left .box{
         border-left: 15px solid #fff;
         padding-left: 7px;
+        height: 400px;
     }
     .home .door .center{
         position: relative;
@@ -1105,6 +1104,7 @@ to   { right: 170px; }
     }
     .home .center .shadow{
         width:10px;
+        height: 400px;
         float: left;
         background-color: rgb(65,64,75);
         box-shadow: -10px 5px 40px 40px rgb(65,64,75);
@@ -1115,24 +1115,24 @@ to   { right: 170px; }
     }
     .home .center .whitedoor .blackdoor{
         height: 400px;
-        left: 70px;
+        left: 35.5%;
         border-right: 130px solid #000;
     }
     .home .center .down{
-        left: 40%;
-        top: 400px;
+        top: 399px;
     }
     .home .right .box{
         border-right:15px solid #fff;
         padding-right: 7px;
+        height: 400px;
     }
     @keyframes left_move{
         from{left:0;}
-        to{left:120px;}
+        to{left:100px;}
     }
     @keyframes right_move{
         from{right:0;}
-        to{right:120px;}
+        to{right:100px;}
     }
 
 

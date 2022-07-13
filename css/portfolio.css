@@ -11,7 +11,7 @@ body{font-family: 'NanumSquareRound';}
     font-weight: normal;
     font-style: normal;
 }
-/* html, body{overflow: hidden;} */
+html, body{overflow: hidden;}
 
 .nav{
     position: absolute;

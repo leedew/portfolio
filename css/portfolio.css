@@ -63,7 +63,7 @@ html, body{overflow: hidden;}
     width: 270px;
     height: 300px;
     border-radius: 0 0 20px 20px;
-    background-color: rgba(51,51,51,0.8);
+    background-color: rgba(51,51,51,0.7);
     transition: 0.5s;
     left: -300px;
     z-index: 10;
@@ -122,27 +122,16 @@ html, body{overflow: hidden;}
 /* HOME */
 .home{
     width: 100%;
-    height: 969px;
+    height: auto;
     background-color: #333;
 }
 .home .home-wrap{
     max-width: 1240px;
-    height: 870px;
+    height: auto;
     margin: 0 auto;
-    /* background-color: #eee; */
     position: relative;
 }
-.home .home-wrap > p{
-    color: #fff;
-    font-size: 1.3vw;
-    font-weight: bold;
-    position: absolute;
-    bottom: 60px;
-    left: 50%;
-    text-align: center;
-    transform: translate(-50%,-50%) rotate(90deg);
-    animation: home-scroll 2s infinite linear 4s;
-}
+
 
 @keyframes home-scroll {
     0%{transform: translate(-50%,0) rotate(90deg);}    
@@ -154,10 +143,9 @@ html, body{overflow: hidden;}
 
 .home .door{
     width: 100%;
-    height: 100%;
+    height: 969px;
     position: relative;
-    top:15%;
-    transform: translate(19.5%,0%);
+    transform: translate(19.5%,15%);
 }
 .home .door .left{
     float: left;
@@ -225,7 +213,7 @@ html, body{overflow: hidden;}
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
     position: absolute;
-    top: 500px;
+    top: 499px;
     left:29.5%;
 }
 .home .door .right{
@@ -283,7 +271,17 @@ from { right: 0; }
 to   { right: 170px; }
 }
 
-
+.home .home-wrap > p{
+    color: #fff;
+    font-size: 1.3vw;
+    font-weight: bold;
+    position: absolute;
+    bottom: 130px;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%,-50%) rotate(90deg);
+    animation: home-scroll 2s infinite linear 4s;
+}
 
 
 
@@ -1041,6 +1039,7 @@ to   { right: 170px; }
     .indicator{
         opacity: 0;
     }
+    
 
     /* nav */
     .nav{
@@ -1053,7 +1052,7 @@ to   { right: 170px; }
     .nav .logo img{
         width: 50px;
         height: auto;
-        transform: translate(0%,-30%);
+        transform: translate(-50%,-20%);
     }
     .nav .hamburger{
         margin-left: 0;
@@ -1089,27 +1088,27 @@ to   { right: 170px; }
 
     /* home */
     .home .home-wrap{
-        max-width: 100%;
+        width: 100%;
+        height: 600px;
     }
     .home .home-wrap > p{
-        bottom: 350px;
-        left: 55%;
-        font-size: 14px;
-        max-width: 100%;
+        left: 40%;
+        bottom: 20%;
+        font-size: 16px;
     }
     .home .door{
-        max-width: 100%;
+        width: 100%;
         transform: translate(0,0);
         top: 10%;
+        padding-top: 30px;
     }
     .home .left .box{
+        height: 300px;
         border-left: 20px solid #fff;
         padding-left: 7px;
-        height: 300px;
     }
     .home .door .center{
         position: relative;
-        left:30px;
     }
     .home .center .shadow{
         width:10px;
@@ -1119,17 +1118,17 @@ to   { right: 170px; }
         box-shadow: -10px 5px 40px 40px rgb(65,64,75);
     }
     .home .center .whitedoor{
-        width: 200px;
+        width: 150px;
         height: 300px;
     }
     .home .center .whitedoor .blackdoor{
-        max-height: 300px;
-        left: 35.5%;
+        height: 300px;
+        left: 14%;
         border-right: 130px solid #000;
     }
     .home .center .down{
         top: 299px;
-        left: 40%;
+        left: 35.5%;
     }
     .home .right .box{
         border-right:20px solid #fff;
@@ -1138,22 +1137,20 @@ to   { right: 170px; }
     }
     @keyframes left_move{
         from{left:0;}
-        to{left:100px;}
+        to{left:80px;}
     }
     @keyframes right_move{
         from{right:0;}
-        to{right:100px;}
+        to{right:80px;}
     }
 
 
 
     /* about 프로필*/
-    .about{
-        /* height: 969px; */
-    }
+
     .about .about-wrap{
         width:97%;
-        height: 87.55vh;
+        height: auto;
     }
     .about .left{
         float: none;
@@ -1295,6 +1292,8 @@ to   { right: 170px; }
         position: relative;
     }
 
-
+    .section{
+        height: auto;
+    }
 
 }

@@ -43,79 +43,122 @@ $("document").ready(function(){
         }
     })
 
-
-    $(window).on("mousewheel DOMMouseScroll", function(e){
-        let delta = e.originalEvent.wheelDelta;
-        let firefox = e.originalEvent.detail;
+    
+//코드 적을때 반응형 부분과 둘 다 적어줘야함
+// 버그방지 = 데스크탑에서 작게 보고싶은 경우
+    $(window).resize(function(){
+        let $width = $(window).width();
+        if($width >= 640){
+            $(window).on("mousewheel DOMMouseScroll", function(e){
+                let delta = e.originalEvent.wheelDelta;
+                let firefox = e.originalEvent.detail;
+                
+                if($("html, body").is(":animated")){
+                    return
+                }
         
-        if($("html, body").is(":animated")){
-            return
-        }
-
-        if(delta<0 || firefox < 0){
-            
-            wheel_count++;
-            if(wheel_count > $(".section").length -1){
-                wheel_count = $(".section").length -1   
-            }
-        }else{
-            wheel_count--;
-            if(wheel_count <0){
-                wheel_count = 0;
-            }
-        }
-
-        // 글자고정
-        if(wheel_count==2 || wheel_count==3){
-            setTimeout(function(){
-                $(".work .left h1").addClass("on")
-            },1000)
-        }else{
-            setTimeout(function(){
-                $(".work .left h1").removeClass("on")
-            },700)
-        }
-
-
+                if(delta<0 || firefox < 0){
+                    
+                    wheel_count++;
+                    if(wheel_count > $(".section").length -1){
+                        wheel_count = $(".section").length -1   
+                    }
+                }else{
+                    wheel_count--;
+                    if(wheel_count <0){
+                        wheel_count = 0;
+                    }
+                }
         
-        console.log(wheel_count)
+                // 글자고정
+                if(wheel_count==2 || wheel_count==3){
+                    setTimeout(function(){
+                        $(".work .left h1").addClass("on")
+                    },1000)
+                }else{
+                    setTimeout(function(){
+                        $(".work .left h1").removeClass("on")
+                    },700)
+                }
+        
+                
+                console.log(wheel_count)
+        
+                $("html, body").stop().animate({
+                    scrollTop: $(".section").height()*wheel_count,
+                },1000)
+        
+                $(".indicator ul li").removeClass("on").eq(wheel_count).addClass("on") 
+        
+            })
+            $("html, body").css("overflow", "hidden")
+        }else{
+            $(window).off("mousewheel DOMMouseScroll touchmove")
+            $("html, body").css("overflow", "visible")
 
-        $("html, body").stop().animate({
-            scrollTop: $(".section").height()*wheel_count,
-        },1000)
-
-        $(".indicator ul li").removeClass("on").eq(wheel_count).addClass("on") 
-
+        }
     })
+
+// 미디어쿼리 640px일때 코드 , else~(데스크탑버전)
+    if (window.matchMedia("(max-width: 640px)").matches) {
+        
+        $("html, body").css("overflow", "visible")
+        $(window).off("mousewheel DOMMouseScroll touchmove")
+      } else {
+        
+        $(window).on("mousewheel DOMMouseScroll", function(e){
+            let delta = e.originalEvent.wheelDelta;
+            let firefox = e.originalEvent.detail;
+            
+            if($("html, body").is(":animated")){
+                return
+            }
+    
+            if(delta<0 || firefox < 0){
+                
+                wheel_count++;
+                if(wheel_count > $(".section").length -1){
+                    wheel_count = $(".section").length -1   
+                }
+            }else{
+                wheel_count--;
+                if(wheel_count <0){
+                    wheel_count = 0;
+                }
+            }
+    
+            // 글자고정
+            if(wheel_count==2 || wheel_count==3){
+                setTimeout(function(){
+                    $(".work .left h1").addClass("on")
+                },1000)
+            }else{
+                setTimeout(function(){
+                    $(".work .left h1").removeClass("on")
+                },700)
+            }
+    
+    
+            
+            console.log(wheel_count)
+    
+            $("html, body").stop().animate({
+                scrollTop: $(".section").height()*wheel_count,
+            },1000)
+    
+            $(".indicator ul li").removeClass("on").eq(wheel_count).addClass("on") 
+    
+        })
+
+      }
+
+
+
+   
 
     
     // 터치스와이프
-    $("body").swipe({
-        swipe: function(event, direction){
-            if(direction == "up"){
-                wheel_count++;
-                if(wheel_count > $(".section").length -1){
-                wheel_count = $(".section").length -1   
-                }
-            }else if(direction=="down"){
-                wheel_count--;
-                if(wheel_count <0){
-                wheel_count = 0;
-                }
-            }else if(direction=="left"){
-                alert("왼쪽")
-            }else if(direction=="right"){
-                alert("오른쪽")
-            }
-            
-        
-            $("html, body").stop().animate({
-                scrollTop: $(".section").height()*wheel_count
-            },1000)
-            // $(".nav ul li").removeClass("on").eq(wheel_count).addClass("on")
-            // $(".indicator ul li").removeClass("on").eq(wheel_count).addClass("on")
-        }
-    })
+    
 
 
 

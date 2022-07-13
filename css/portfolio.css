@@ -17,13 +17,12 @@ html, body{overflow: hidden;}
     position: absolute;
     width: 100%;
     height: 60px;
-    /* background-color:rgba(215,230,232,0.3); */
 }
 .nav .logo{
     width: 100px;
     height: 60px;
     position: absolute;
-    margin-top: 20px;
+    margin-top: 30px;
     left: 50%;
     right: 50%;
     z-index: 20;
@@ -45,7 +44,7 @@ html, body{overflow: hidden;}
     position: fixed;
     display: inline-block;
     font-size: 16px;
-    z-index: 10;
+    z-index: 11;
     transition: 0.5s;
     color:#d7e6e8;
     letter-spacing: -3px;
@@ -62,7 +61,7 @@ html, body{overflow: hidden;}
     width: 270px;
     height: 300px;
     border-radius: 0 0 20px 20px;
-    background-color: #333;
+    background-color: rgba(51,51,51,0.8);
     transition: 0.5s;
     left: -300px;
     z-index: 10;
@@ -80,10 +79,19 @@ html, body{overflow: hidden;}
     text-align: center;
     height: 30px;
 }
-
-
 .side ul li a{
     font-size: 0;
+    display: inline-block;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+}
+.side ul li:hover a{
+    background-color: #d7e6e8;
+}
+
+.side ul li:hover a::before{
+    color: #333;
 }
 .side ul li a::before{
     font-size: 16px;
@@ -98,8 +106,8 @@ html, body{overflow: hidden;}
 .side ul li:nth-child(7) a::before{content:"Contact"}
 .side ul li:first-child:hover a::before{content: " 홈";}
 .side ul li:nth-child(2):hover a::before{content: "프로필";}
-.side ul li:nth-child(3):hover a::before{content: "리디자인";}
-.side ul li:nth-child(4):hover a::before{content: "클론코딩";}
+.side ul li:nth-child(3):hover a::before{content: "퍼블리싱1";}
+.side ul li:nth-child(4):hover a::before{content: "퍼블리싱2";}
 .side ul li:nth-child(5):hover a::before{content: "디자인";}
 .side ul li:nth-child(6):hover a::before{content: "작업과정";}
 .side ul li:nth-child(7):hover a::before{content: "연락처"}
@@ -145,8 +153,9 @@ html, body{overflow: hidden;}
     width: 100%;
     height: 100%;
     padding-top: 60px;
-    position: absolute;
-    left: 18.5%;
+    right: 50%;
+    left: 50%;
+    transform: translate(18.5%,0%);
 }
 .home .door .left{
     float: left;
@@ -160,20 +169,15 @@ html, body{overflow: hidden;}
     float: left;
     padding-left: 20px;
 }
-
-
 .home .left .box:nth-child(2){
     border-top: 50px solid transparent;
     border-bottom: 50px solid transparent;
-
 }
 .home .left .box:nth-child(3){
     border-top: 60px solid transparent;
     border-bottom: 60px solid transparent;
-    /* padding-right: 40px; */
 }
 .home .door .center{
-    /* padding: 0 0 0 40px; */
     opacity: 0;
     transition: 0.8s;
 }
@@ -204,7 +208,6 @@ html, body{overflow: hidden;}
     animation-fill-mode:both;
     transform-origin: right;
     animation-direction:alternate;
-    
 }
 @keyframes blackdoor {
     0%{transform:  rotateY(0deg);}
@@ -313,14 +316,14 @@ to   { right: 170px; }
 .about .about-wrap{
     width: 1240px;
     height: 809px;
-    background-color: #eee;
+    background-color: #f1f2f3;
     border-radius: 50px;
     margin: 0 auto;
 }
 .about h1{
     font-size: 50px;    
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     text-align: center;
 }
 .about .left{
@@ -382,6 +385,7 @@ to   { right: 170px; }
     position: relative;
     border-radius: 20px;
     display: inline-block;
+    border: 1px solid #d7e6e8;
 }
 .about .right .keyword li{
     height: 20px;
@@ -1034,70 +1038,112 @@ to   { right: 170px; }
     .indicator{
         opacity: 0;
     }
+    .nav .logo img{
+        width: 50px;
+        height: auto;
+        margin-left: 30px;
+    }
+    .nav .hamburger{
+        margin-left: 0;
+    }
+    .nav .hamburger a.on{
+        transform: rotate(35deg);
+        color: rgb(246, 241, 148);
+        letter-spacing: 2px;
+    }
+    .side{
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+      left: -100%;
+    }
+    .side.on{
+        left: 0px;
+    }
+    .side ul{
+       margin-top: 100px;
+    }
+    .side ul li{
+        width: 100%;
+        margin: 50px 0;
+    }
+    .side ul li a{
+        font-weight: bold;
+    }
+    .side ul li:hover a{
+        background-color: #d7e6e8;
+    }
 
-
+    .side ul li:hover a::before{
+        color: #333;
+    }
 
 
     /* home */
-    .home{
-        width: 100%;
-    }
     .home .home-wrap{
         width: 100%;
     }
     .home .home-wrap > p{
         font-size: 18px;
-        bottom: 150px;
+        bottom: 80px;
     }
     .home .door{
         width: 100%;
         left: 0;
+        transform: translate(1.5%,0);
     }
     .home .left .box{
-        border-left: 40px solid #fff;
+        border-left: 25px solid #fff;
         border-top: 40px solid transparent;
         border-bottom: 40px solid transparent;
         padding-left: 10px;
     }
+    .home .center .shadow{
+        width:10px;
+        height: 500px;
+        float: left;
+        background-color: rgb(65,64,75);
+        box-shadow: -10px 5px 40px 40px rgb(65,64,75);
+    }
     .home .center .down{
-        left: 296px;
+        left: 225px;
     }
     .home .right .box{
-        border-right: 40px solid #fff;
+        border-right: 25px solid #fff;
         padding-right: 10px;
     }
     @keyframes left_move{
         from{left:0;}
-        to{left:165px;}
+        to{left:140px;}
     }
     @keyframes right_move{
         from{right:0;}
-        to{right:165px;}
+        to{right:140px;}
     }
-
 
 
 
     /* about 프로필*/
+    .about{
+        height: 969px;
+    }
     .about .about-wrap{
-        width:100%;
-        margin-bottom: 45px;
+        width:97%;
     }
     .about .left{
         float: none;
         width: 100%;
-        height: 250px;
-        /* background-color: #eee; */
+        height: 269px;
+        border-right: 0;
     }
     .about h1{
-        margin-top: 10px;
-        margin-bottom: 20px;
+        margin-bottom: 0px;
         font-size: 30px;
     }
     .about .left .me{
         position: relative;
-        top: -130px;
-        font-size: 14px;
+        top: -100px;
+        font-size: 12px;
     }
     .about .left img{
         left: 50%;
@@ -1110,6 +1156,7 @@ to   { right: 170px; }
 
     .about .right{
         float: none;
+        height: 709px;
     }
     .about .right ul li{
         font-size: 12px;
@@ -1123,6 +1170,19 @@ to   { right: 170px; }
     .about .right .keyword li p{
         font-size: 12px;
     }
+    .about .right .profile p{
+        font-size: 14px;
+    }
+    .about .right .keyword{
+        margin-bottom: 10px;
+    }
+    .about .experiences h3{
+        margin-bottom: 10px;
+    }
+    .about .right .experiences ul li span{
+        margin-left: 37px;
+    }
+
 
 
     /* work */

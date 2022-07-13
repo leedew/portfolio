@@ -1085,7 +1085,7 @@ to   { right: 170px; }
         width: 100%;
     }
     .home .home-wrap > p{
-        bottom: 80px;
+        bottom: 180px;
         left: 54%;
     }
     .home .door{
@@ -1097,7 +1097,8 @@ to   { right: 170px; }
         border-left: 20px solid #fff;
         border-top: 40px solid transparent;
         border-bottom: 40px solid transparent;
-        padding-left: 10px;
+        padding-left: 7px;
+        height: 400px;
     }
     .home .door .center{
         position: relative;
@@ -1105,25 +1106,28 @@ to   { right: 170px; }
     }
     .home .center .shadow{
         width:10px;
-        height: 500px;
+        height: 400px;
         float: left;
         background-color: rgb(65,64,75);
         box-shadow: -10px 5px 40px 40px rgb(65,64,75);
     }
     .home .center .whitedoor{
         width: 230px;
+        height: 400px;
     }
     .home .center .whitedoor .blackdoor{
         left: 81px;
+        height: 400px;
         border-right: 150px solid #000;
     }
     .home .center .down{
         left:160px;
-        top: 500px;
+        top: 400px;
     }
     .home .right .box{
+        height: 400px;
         border-right: 20px solid #fff;
-        padding-right: 10px;
+        padding-right: 7px;
     }
     @keyframes left_move{
         from{left:0;}

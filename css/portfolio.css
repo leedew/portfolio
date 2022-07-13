@@ -1080,23 +1080,23 @@ to   { right: 170px; }
 
     /* home */
     .home .home-wrap{
-        width: 100%;
+        max-width: 100%;
     }
     .home .home-wrap > p{
-        bottom: 270px;
+        bottom: 350px;
         left: 55%;
         font-size: 14px;
+        max-width: 100%;
     }
     .home .door{
-        position: absolute;
-        width: 100%;
-        transform: translate(8%,0);
+        max-width: 100%;
+        transform: translate(0,0);
         top: 10%;
     }
     .home .left .box{
-        border-left: 15px solid #fff;
+        border-left: 22px solid #fff;
         padding-left: 7px;
-        height: 400px;
+        height: 300px;
     }
     .home .door .center{
         position: relative;
@@ -1104,27 +1104,28 @@ to   { right: 170px; }
     }
     .home .center .shadow{
         width:10px;
-        height: 400px;
+        height: 300px;
         float: left;
         background-color: rgb(65,64,75);
         box-shadow: -10px 5px 40px 40px rgb(65,64,75);
     }
     .home .center .whitedoor{
         width: 200px;
-        height: 400px;
+        height: 300px;
     }
     .home .center .whitedoor .blackdoor{
-        height: 400px;
+        max-height: 300px;
         left: 35.5%;
         border-right: 130px solid #000;
     }
     .home .center .down{
-        top: 399px;
+        top: 299px;
+        left: 40%;
     }
     .home .right .box{
-        border-right:15px solid #fff;
+        border-right:22px solid #fff;
         padding-right: 7px;
-        height: 400px;
+        height: 300px;
     }
     @keyframes left_move{
         from{left:0;}

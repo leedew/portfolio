@@ -1,5 +1,18 @@
 $("document").ready(function(){
-
+    document.documentElement.addEventListener('touchstart', function (event) {
+        if (event.touches.length > 1) {
+             event.preventDefault(); 
+           } 
+       }, false);
+   
+   var lastTouchEnd = 0; 
+   
+   document.documentElement.addEventListener('touchend', function (event) {
+        var now = (new Date()).getTime();
+        if (now - lastTouchEnd <= 300) {
+             event.preventDefault(); 
+           } lastTouchEnd = now; 
+       }, false);
     //aos 설정
     AOS.init();
     
@@ -92,6 +105,7 @@ $("document").ready(function(){
     if (window.matchMedia("(max-width: 640px)").matches) {
         
         $("html, body").css("overflow", "visible")
+
         $(window).off("mousewheel DOMMouseScroll touchmove")
       } else {
         

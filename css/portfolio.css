@@ -1073,7 +1073,7 @@ to   { right: 170px; }
 
     /* 인디케이터 */
     .indicator{
-        display: none;
+        visibility: hidden;
     }
     
 

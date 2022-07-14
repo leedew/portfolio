@@ -105,7 +105,7 @@ $("document").ready(function(){
     if (window.matchMedia("(max-width: 640px)").matches) {
         
         $("html, body").css("overflow", "visible")
-
+        $(".indicator").css("display","none")
         $(window).off("mousewheel DOMMouseScroll touchmove")
       } else {
         

@@ -43,7 +43,7 @@ $("document").ready(function(){
         }
     })
 
-    
+
 //코드 적을때 반응형 부분과 둘 다 적어줘야함
 // 버그방지 = 데스크탑에서 작게 보고싶은 경우
     $(window).resize(function(){
@@ -68,17 +68,6 @@ $("document").ready(function(){
                     if(wheel_count <0){
                         wheel_count = 0;
                     }
-                }
-        
-                // 글자고정
-                if(wheel_count==2 || wheel_count==3){
-                    setTimeout(function(){
-                        $(".work .left h1").addClass("on")
-                    },1000)
-                }else{
-                    setTimeout(function(){
-                        $(".work .left h1").removeClass("on")
-                    },700)
                 }
         
                 
@@ -127,19 +116,8 @@ $("document").ready(function(){
                 }
             }
     
-            // 글자고정
-            if(wheel_count==2 || wheel_count==3){
-                setTimeout(function(){
-                    $(".work .left h1").addClass("on")
-                },1000)
-            }else{
-                setTimeout(function(){
-                    $(".work .left h1").removeClass("on")
-                },700)
-            }
     
     
-            
             console.log(wheel_count)
     
             $("html, body").stop().animate({
@@ -153,17 +131,8 @@ $("document").ready(function(){
       }
 
 
-
-   
-
-    
     // 터치스와이프
     
-
-
-
-
-
     $(".indicator ul li").click(function(){
         wheel_count =$(this).index();
 
@@ -186,10 +155,6 @@ $("document").ready(function(){
     // home- 가운데 문
     $(".home .door .center").css("opacity",1).css("transition-delay","3500ms").css("animation-delay","2000ms")
     
-
-
-    
-
 
     //소개
     const wr = document.querySelector(".keyword");
@@ -220,10 +185,6 @@ $("document").ready(function(){
     }   
 
 
-    // progrssbar
-
-
-
     // 스크롤탑
     $(window).scroll(function(){
         let pos = $(window).scrollTop();
@@ -250,52 +211,107 @@ $("document").ready(function(){
     })
     
 
+
     
-    //process 슬라이드
-    $(".process-slick").slick({
-        arrows: true, 
-        dots: true,
-        slidesToShow: 3, 
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 1500,
-        centerMode: true,
-        responsive:[
-            {
-                breakpoint: 1024, 
-                settings: {
-                   
-                    slidesToShow: 3,
-                    slidesToScroll: 2
-                }
+    (function() {
+
+        var slidersContainer = document.querySelector('.sliders-container');
+    
+        
+        // Initializing the numbers slider
+        // 이미지 숫자
+        var msNumbers = new MomentumSlider({
+            el: slidersContainer,
+            cssClass: 'ms--numbers',
+            range: [1, 4],
+            rangeContent: function (i) {
+                return '0' + i;
             },
-            {
-                breakpoint: 640,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    dots: false
+            style: {
+                transform: [{scale: [0.4, 1]}],
+                opacity: [0, 1]
+            },
+            interactive: false
+        });
+    
+        // Initializing the titles slider
+        //이미지 제목
+        var titles = [
+            'MYREALTRIP',
+            'KIEHL',
+            'SUBWAY',
+            'CAFE'
+        ];
+        var msTitles = new MomentumSlider({
+            el: slidersContainer,
+            cssClass: 'ms--titles',
+            range: [0, 3],
+            rangeContent: function (i) {
+                return '<h3>'+ titles[i] +'</h3>';
+            },
+            vertical: true,
+            reverse: true,
+            style: {
+                opacity: [0, 1]
+            },
+            interactive: false
+        });
+    
+        // Initializing the links slider
+        //자세히보기 링크
+        var msLinks = new MomentumSlider({
+            el: slidersContainer,
+            cssClass: 'ms--links',
+            range: [0, 3],
+            rangeContent: function () {
+                return '<a class="ms-slide__link">자세히보기</a>';
+            },
+            vertical: true,
+            interactive: false
+        });
+    
+        // Get pagination items
+        var pagination = document.querySelector('.pagination');
+        var paginationItems = [].slice.call(pagination.children);
+    
+        // Initializing the images slider
+        var msImages = new MomentumSlider({
+    
+            //슬라이드 추가할 요소들 적어주면됨
+            el: slidersContainer,
+
+            // CSS class to reference the slider
+            cssClass: 'ms--images',
+
+            //이미지 4개라서 0~3
+            range: [0, 3],
+            rangeContent: function () {
+                return '<div class="ms-slide__image-container"><div class="ms-slide__image"></div></div>';
+            },
+
+            //같이 슬라이드 될 요소들
+            sync: [msNumbers, msTitles, msLinks],
+
+
+            //슬라이드 이동할때 추가할 요소들 적기
+            style: {
+                '.ms-slide__image': {
+                    transform: [{scale: [1.5, 1]}]
                 }
             }
-        ]
-    })
-    
+        });
+
+        // 버튼클릭하면 해당 슬라이드로 이동
+        pagination.addEventListener('click', function(e) {
+            if (e.target.matches('.pagination__button','.header__memu ul li')) {
+                var index = paginationItems.indexOf(e.target.parentNode);
+                msImages.select(index);
+            }
+        });
+        
+    });
 
 
-
-
-
-    // $(".me").textillate({
-    //          loop:true,
-    //          in:{
-    //              effect: "bounceIn",
-    //              shuffle: true
-    //          },
-    //          out:{
-    //              effect: "bounceOut",
-    //              shuffle: true
-    //          }
-    //     })
 
     
 

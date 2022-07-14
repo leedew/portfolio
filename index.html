@@ -20,7 +20,9 @@
     
     <script src="js/aos.js"></script>
 
+    <script src="js/momentum-slider.min.js"></script>
     <script src="js/slick.js"></script>
+    <script src="js/momentum-slider.min.js"></script>
     <script src="js/jquery.fittext.js"></script>
     <script src="js/jquery.lettering.js"></script>
     <script src="js/jquery.textillate.js"></script>
@@ -30,6 +32,7 @@
     <script src="js/jquery.color.min.js"></script>
     <script src="js/jquery.animateNumber.js"></script>
     <script src="js/progressbar.min.js"></script>
+ 
 
     <script src="js/portfolio.js?ver=20220713"></script>
 </head>
@@ -84,9 +87,8 @@
     <ul>
         <li><a href="#">● Home</a></li>
         <li><a href="#">● About</a></li>
-        <li><a href="#">● Work #1</a></li>
-        <li><a href="#">● Work #2</a></li>
-        <li><a href="#">● Process</a></li>
+        <li><a href="#">● Portfolio</a></li>
+        <li><a href="#">● Work</a></li>
         <li><a href="#">● Design</a></li>
         <li><a href="#">● Contact</a></li>
     </ul>
@@ -147,116 +149,59 @@
 <!-- 작업물/포트폴리오 -->
 <div class="work section">
     <div class="work-wrap">
-        <h1>web publishing</h1>
-        <div class="item1 content" data-aos="fade-left" data-aos-offset="500" data-aos-duration="500">
-            <div class="info">
-                <h3>1.</h3>
-                <p>사이트 : 마이리얼트립</p>
-                <p>컨셉 : 신나는, 활발한</p>
-                <p>제작기간 : 4주 소요</p>
-                <a href="../myrealtrip.html" target="_blank"><button>웹 사이트 바로가기</button></a>
-            </div>
+        <h1>Portfolio</h1>
+        <div class="content" data-aos="zoom-in" data-aos-offset="800" data-aos-delay="300">
             <div class="imac">
                 <div class="screen">
-                    <div class="viewport" style="background-image: url(images/myrealtrip.png);"></div>
-                </div>
-                <div class="line"></div>
-                <div class="leg"></div>
-                <div class="foot"></div>
-            </div>
-        </div>
-        <div class="item2 content" data-aos="fade-right" data-aos-offset="500" data-aos-duration="500" data-aos-delay="500">
-            <div class="imac">
-                <div class="screen">
-                    <div class="viewport" style="background-image: url(images/kiehls.png);"></div>
+                    <div class="viewport" style="background-image: url(images/portfolio.png);"></div>
                 </div>
                 <div class="line"></div>
                 <div class="leg"></div>
                 <div class="foot"></div>
             </div>
             <div class="info">
-                <h3>2.</h3>
-                <p>사이트 : 키엘</p>
-                <p>컨셉 : 내추럴, 산뜻한</p>
-                <p>제작기간 : 3주 소요</p>
-                <a href="#"><button>데스크탑 바로가기</button></a>
-                <a href="#"><button>모바일 바로가기</button></a>
+                <p>컨셉 : 심플</p>
+                <p>제작기간 : ~ </p>
+                <p>Tool : Visual Studio Code</p>
+                <a href="index.html" target="_blank"><button>PC ver.</button></a>
+                <a href="#" target="_blank"><button>Mobile ver.</button></a>
+                <a href="#" target="_blank"><button>Guide</button></a>
             </div>
         </div>
     </div>
 </div>
-<div class="work2 section">
-    <div class="work-wrap">
-        <h1>web publishing</h1>
-        <div class="item1 content" data-aos="fade-left" data-aos-offset="500" data-aos-duration="500">
-            <div class="info">
-                <h3>3.</h3>
-                <p>사이트 : 서브웨이</p>
-                <p>컨셉 : 신나는, 활발한</p>
-                <p>제작기간 : 4주 소요</p>
-                <a href="../20220419-subway.html" target="_blank"><button>데스크탑 바로가기</button></a>
-                <a href="#"><button>모바일 바로가기</button></a>
-            </div>
-            <div class="imac">
-                <div class="screen">
-                    <div class="viewport" style="background-image: url(images/subway.png);"></div>
-                </div>
-                <div class="line"></div>
-                <div class="leg"></div>
-                <div class="foot"></div>
-            </div>
-        </div>
-        <div class="item2 content" data-aos="fade-right" data-aos-offset="500" data-aos-duration="500" data-aos-delay="500">
-            <div class="imac">
-                <div class="screen">
-                    <div class="viewport" style="background-image: url(images/cafe.png);"></div>
-                </div>
-                <div class="line"></div>
-                <div class="leg"></div>
-                <div class="foot"></div>
-            </div>
-            <div class="info">
-                <h3>4.</h3>     
-                <p>사이트 : ~카페</p>
-                <p>컨셉 : 달콤한, 부드러운</p>
-                <p>제작기간 : 2주 소요</p>
-                <a href="#"><button>데스크탑 바로가기</button></a>
-            </div>
-        </div>
-    </div>
-</div>
+
 
 
 
 <!-- portfolio 포트폴리오-->
-<div class="process-bg section"></div>
-<div class="slick process">
-    <div class="slick process-wrap">
-        <h1>Process</h1>
-        <div class="slick process-slick">
-            <ul>
-                <li class="slide-item">
-                    <a href="#"><img src="http://via.placeholder.com/400/aaa" alt=""></a>
-                </li>
+<div class="container section">
+    <header class="header">
+        <h1>Work</h1>
+        <nav class="header__menu">
+            <ul class="header__menu__list">
+                <li class="header__menu__item"><a class="header__menu__link">myrealtrip</a></li>
+                <li class="header__menu__item"><a class="header__menu__link">kiehl's</a></li>
+                <li class="header__menu__item"><a class="header__menu__link">subway</a></li>
+                <li class="header__menu__item"><a class="header__menu__link">~cafe</a></li>
             </ul>
-            <div class="slide-item">
-                <img src="http://via.placeholder.com/300/eee" alt="작업과정">
-            </div>
-            <div class="slide-item">
-                <img src="http://via.placeholder.com/300/aed" alt="작업과정">
-            </div>
-            <div class="slide-item">
-                <img src="http://via.placeholder.com/300/ae3" alt="작업과정">
-            </div>
-            <div class="slide-item">
-                <img src="http://via.placeholder.com/300/aa2" alt="작업과정">
-            </div>
-            <div class="slide-item">
-                <img src="http://via.placeholder.com/300/aa9" alt="작업과정">
-            </div>
-        </div>
-    </div>
+        </nav>
+    </header>
+    <!-- Container for all sliders, and pagination -->
+    <main class="sliders-container">
+        <!-- Here will be injected sliders for images, numbers, titles and links -->
+        <!-- Simple pagination for the slider -->
+        <ul class="pagination">
+            <li class="pagination__item"><a class="pagination__button"></a></li>
+            <li class="pagination__item"><a class="pagination__button"></a></li>
+            <li class="pagination__item"><a class="pagination__button"></a></li>
+            <li class="pagination__item"><a class="pagination__button"></a></li>
+        </ul>
+    </main>
 </div>
+<!-- partial -->
+  <script src='https://rawgit.com/lmgonzalves/momentum-slider/master/dist/momentum-slider.min.js'></script><script  src="js/script.js"></script>
+
 
 
 

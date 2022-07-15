@@ -420,30 +420,7 @@ to   { right: 170px; }
 .about .right .experiences ul li span{
     margin-left: 20px;
 }
-.about .right .skills ul{
-    width: 100px;
-    height: 200px;
-    background-color: #fff;
-}
-.about .right .skills ul li{
-    padding: 10px;
-    width: 100%;
-    height: calc(100%/5);
-}
-.about .right .skills ul li p{
-    float: left;
-    width: 50px;
-    height: 20px;
-    line-height: 20px;
-    text-align: center;
-    font-weight: bold;
-}
-.about .right .skills .progress{
-    width: 300px;
-    height: 20px;
-    background-color: #fff;
-    float: left;
-}
+
 
 
 /* work */
@@ -1073,7 +1050,7 @@ to   { right: 170px; }
 
     /* 인디케이터 */
     .indicator{
-        visibility: hidden;
+        opacity: 0;
     }
     
 
@@ -1088,8 +1065,7 @@ to   { right: 170px; }
     .nav .logo img{
         width: 50px;
         height: auto;
-
-        transform: translate(-20%,-20%);
+        transform: translate(20%,-20%);
     }
     .nav .hamburger{
         margin-left: 0;
@@ -1126,7 +1102,7 @@ to   { right: 170px; }
     /* home */
     .home .home-wrap{
         width: 100%;
-        height: 600px;
+        height: 700px;
     }
     .home .home-wrap > p{
         left: 50%;
@@ -1188,11 +1164,12 @@ to   { right: 170px; }
     .about .about-wrap{
         width:97%;
         height: auto;
+        margin-bottom: 30px;
     }
     .about .left{
         float: none;
         width: 100%;
-        height: 269px;
+        height: 270px;
         border-right: 0;
     }
     .about h1{
@@ -1215,77 +1192,71 @@ to   { right: 170px; }
 
     .about .right{
         float: none;
-        height: 709px;
-    }
-    .about .right ul li{
-        font-size: 12px;
-    }
-    .about .right .keyword{
-        width: 250px;
-    }
-    .introduve .right .keyword li{
-        padding: 0;
-    }
-    .about .right .keyword li p{
-        font-size: 12px;
+        height: 700px;
+        margin-top: -30px;
     }
     .about .right .profile p{
         font-size: 14px;
     }
+    
+    .about .right ul li{
+        font-size: 12px;
+    }
+    .about .right .profile > p{
+        right: -40px;
+        font-size: 14px;
+    }
     .about .right .keyword{
+        width: 200px;
+        left: 130px;
         margin-bottom: 10px;
     }
+    .about .right .keyword li p{
+        font-size: 10px;
+    }
+
+    .about .right .introduce ul li p{
+        margin-left: -30px;
+        font-size: 10px;
+    }
+
     .about .experiences h3{
+        margin-top: -20px;
         margin-bottom: 10px;
+    }
+    .about .experiences ul li{
+        margin-left: -30px;
+    }
+    .about .experiences ul li p{
+        font-size: 10px;
+
     }
     .about .right .experiences ul li span{
-        margin-left: 37px;
+        margin-left: 7px;
+        font-size: 10px;
+    }
+    .about .right ul li:nth-child(2) span{
+        margin-left: -50px;
     }
 
 
-
+    
     /* work */
+    .work{
+        width: 100%;
+    }
     .work .work-wrap{
         width: 100%;
-
     }
-    .work .left{
-        float: none;
-        display: inline;
+    .work .content{
+        width: 98%;
+        margin: 0 auto;
+        background-color: #fff;
     }
-    .work .left h1{
-        position: relative;
-        left: 25%;
-        top: 10px;
-        font-size: 30px;
+    .work .content .imac{
+        top: 0;
+        margin-top: 10px;
     }
-    .work .left h1.on{
-        font-size: 30px;
-        position: relative;
-    }
-    .work .right{
-        float: none;
-    }
-    .work .right ul li .content span::after{
-        display: none
-    }
-    
-    .work .right ul li:nth-child(1) .info{
-        margin-top: -10px;
-    }
-    .work .right ul li:nth-child(2) .info{
-        position: relative;
-        left: 170px;
-        top: -50px;
-    }
-    .work2 .right ul li:nth-child(1) .info{
-        margin-top: -40px;
-    }
-    .work2 .right ul li:nth-child(2) .info{
-        position: relative;
-        margin-top: 20px;
-    }
-
 
 
     /* 디자인 */
@@ -1296,6 +1267,7 @@ to   { right: 170px; }
         width: 100%;
         height: 100%;
     }
+ 
 
     .design .box .box-item{
         width: calc(100%/4);
@@ -1303,12 +1275,7 @@ to   { right: 170px; }
 
    
 
-    /* 프로세스 */
-    .slick-prev::before,
-    .slick-next::before{
-      position: relative;
-      top: -80px;
-    }
+
 
     /* 컨텍트 */
     .contact .contact-wrap{

@@ -1,4 +1,6 @@
 $("document").ready(function(){
+
+    // 화면축소X
     document.documentElement.addEventListener('touchstart', function (event) {
         if (event.touches.length > 1) {
              event.preventDefault(); 

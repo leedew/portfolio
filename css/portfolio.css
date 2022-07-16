@@ -22,13 +22,14 @@ body{font-family: 'NanumSquareRound';}
 html, body{overflow: hidden;}
 
 .nav{
-    position: absolute;
-    width: 100%;
+    /* position: absolute; */
+    max-width: 100%;
     height: 60px;
+    background-color: #333;
 }
 .nav .logo{
     width: 100px;
-    height: 60px;
+    height: auto;
     position: absolute;
     margin-top: 30px;
     left: 50%;
@@ -48,20 +49,19 @@ html, body{overflow: hidden;}
     width: 60px;
     height: 100%;
     text-align: center;
-    margin-left: 240px;
+    position: fixed;
+    z-index: 1111111;
 }
 .nav .hamburger a{
-    position: fixed;
     display: inline-block;
     font-size: 16px;
-    z-index: 11;
     transition: 0.5s;
     color:#d7e6e8;
     letter-spacing: -3px;
     -webkit-text-stroke: 1.5px #000;    
 }
 .nav .hamburger a.on{
-    transform: rotate(-35deg);
+    transform: rotate(35deg);
     color: rgb(246, 241, 148);
     letter-spacing: 2px;
 }
@@ -110,18 +110,16 @@ html, body{overflow: hidden;}
 }
 .side ul li:nth-child(1) a::before{content:"Home"}
 .side ul li:nth-child(2) a::before{content:"About"}
-.side ul li:nth-child(3) a::before{content:"Work #1"}
-.side ul li:nth-child(4) a::before{content:"Work #2"}
+.side ul li:nth-child(3) a::before{content:"Portfolio"}
+.side ul li:nth-child(4) a::before{content:"Work"}
 .side ul li:nth-child(5) a::before{content:"Design"}
-.side ul li:nth-child(6) a::before{content:"Process"}
-.side ul li:nth-child(7) a::before{content:"Contact"}
+.side ul li:nth-child(6) a::before{content:"Contact"}
 .side ul li:first-child:hover a::before{content: " 홈";}
 .side ul li:nth-child(2):hover a::before{content: "프로필";}
-.side ul li:nth-child(3):hover a::before{content: "퍼블리싱1";}
-.side ul li:nth-child(4):hover a::before{content: "퍼블리싱2";}
+.side ul li:nth-child(3):hover a::before{content: "포트폴리오";}
+.side ul li:nth-child(4):hover a::before{content: "작업물";}
 .side ul li:nth-child(5):hover a::before{content: "디자인";}
-.side ul li:nth-child(6):hover a::before{content: "작업과정";}
-.side ul li:nth-child(7):hover a::before{content: "연락처"}
+.side ul li:nth-child(6):hover a::before{content: "연락처";}
 
 
 /* HOME */
@@ -437,9 +435,9 @@ to   { right: 170px; }
 }
 .work h1{
     position: relative;
-    font-size: 40px;
+    font-size: 50px;
     text-align: center;
-    padding: 30px 0;
+    padding: 60px 0;
 }
 .work .content{
     width: 100%;
@@ -685,21 +683,22 @@ to   { right: 170px; }
 }
 .ms--numbers {
   position: absolute;
-  left: calc(50% - 400px);
-  top: calc(50% - 320px);
+  left: calc(50% - 440px);
+  top: calc(50% - 340px);
 }
 .ms--numbers .ms-slide {
+  font-family: 'Hahmlet-Regular';
   font-size: 9em;
   color: #39c0f5;
 }
 .ms--numbers .ms-slide:nth-child(2){
-  color: #787878;
+  color: khaki;
 }
 .ms--numbers .ms-slide:nth-child(3){
   color: #009223
 }
 .ms--numbers .ms-slide:nth-child(4){
-  color: #ffa500;
+  color: plum;
 }
 .ms--titles {
   position: relative;
@@ -842,7 +841,7 @@ to   { right: 170px; }
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #eee;
+  background-color:#f6f6f6eb;
 }
 
 .header {
@@ -850,7 +849,14 @@ to   { right: 170px; }
   align-items: center;
   padding: 30px;
 }
-
+.container .header h1{
+    margin-top: 60px;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%,0%);
+    font-size: 50px;
+}
 .header__menu {
   margin-left: auto;
 }
@@ -888,7 +894,6 @@ to   { right: 170px; }
     height: 100%;
     margin: 0 auto;
 }
-
 .design h1{
     font-size: 50px;
     margin-top: 60px;
@@ -944,12 +949,6 @@ to   { right: 170px; }
 }
 
 
-
-
-
-
-
-
 /* contact */
 .contact{
     width: 100%;
@@ -965,7 +964,7 @@ to   { right: 170px; }
     text-align: center;
     padding: 60px 0;
     font-size: 80px;
-    color: #fff;
+    color: transparent;
     -webkit-text-stroke: 0.5px #333;    
 }
 .contact p{
@@ -1045,18 +1044,17 @@ to   { right: 170px; }
 @media screen and (max-width: 640px){
     .section{
         height: auto;
+        max-width: 100%;
     }
-
 
     /* 인디케이터 */
     .indicator{
-        opacity: 0;
+        visibility: hidden;
     }
-    
 
     /* nav */
     .nav{
-        width: 100%;
+        max-width: 100%;
     }
     .nav .logo{
         width: 50px;
@@ -1070,13 +1068,8 @@ to   { right: 170px; }
     .nav .hamburger{
         margin-left: 0;
     }
-    .nav .hamburger a.on{
-        transform: rotate(35deg);
-        color: rgb(246, 241, 148);
-        letter-spacing: 2px;
-    }
     .side{
-      width: 100%;
+      max-width: 100%;
       height: 100%;
       border-radius: 0;
       left: -100%;
@@ -1100,14 +1093,17 @@ to   { right: 170px; }
 
 
     /* home */
+    .home{
+        max-width: 100%;
+    }
     .home .home-wrap{
         width: 100%;
         height: 700px;
     }
-    .home .home-wrap > p{
+    .home .home-wrap p{
         left: 50%;
         bottom: 15%;
-        font-size: 16px;
+        font-size: 1rem;
     }
     .home .door{
         width: 100%;
@@ -1116,7 +1112,7 @@ to   { right: 170px; }
         padding-top: 30px;
     }
     .home .left .box{
-        height: 300px;
+        height:18rem;
         border-left: 20px solid #fff;
         padding-left: 7px;
     }
@@ -1160,11 +1156,10 @@ to   { right: 170px; }
 
 
     /* about 프로필*/
-
     .about .about-wrap{
-        width:97%;
+        width:98%;
         height: auto;
-        margin-bottom: 30px;
+        margin-bottom: 60px;
     }
     .about .left{
         float: none;
@@ -1244,48 +1239,161 @@ to   { right: 170px; }
     /* work */
     .work{
         width: 100%;
+        height: auto;
     }
     .work .work-wrap{
         width: 100%;
     }
     .work .content{
-        width: 98%;
+        width: 100%;
+        height: auto;
         margin: 0 auto;
-        background-color: #fff;
+        margin-bottom: 60px;
     }
     .work .content .imac{
         top: 0;
-        margin-top: 10px;
+        margin-top: 30px;
+        transform: translateX(20%);
+    }
+    .work .content .imac::before{
+        content:"TOUCH";
+        font-size: 10px;
+        padding: 3px 5px;
+        box-shadow: none;
+        border: none;
+    }
+    .work .content .info{
+        width: 100%;
+        padding: 0;
+        top: 0;
+        margin: 0;
+        margin-top: 60px;
+        background-color: #333;
+        color: #fff;
+    }
+    .work .content .info p{
+        font-size: 14px;
+    }
+    .work .content .info button{
+        float: left;
+        width: 100px;
+        height: 30px;
+        left: 20px;
+        position: relative;
+    }
+
+
+    /* work 작업물 */
+    .container{
+        width: 100%;
+    }
+    .header{
+        width: 100%;
+        margin-top: 30px;
+    }
+    .container .header > h1{
+        left: 34%;
+        font-size: 40px;
+    }
+    .header__menu{
+        font-size: 12px;
+        display: none;
+    }
+    .container .sliders-container{
+        width: 100%;
+    }
+
+    .ms--titles{
+        max-width: 100%;
+        left: 0%;
+        top: 30px;
+        font-size: 10px;
+    }
+    .ms--numbers{
+        margin-top: 30px;
+        left: 10%;
+        top: 0;
+        font-size: 12px;
+    }
+    .ms--images{
+        left: 0;
+    }
+    .ms-slide__image-container{
+        width: 100%;
+        
+    }
+    .ms--images.ms-container--horizontal{
+        width: 90%;
+    }
+    .ms--images .ms-slide__image{
+        width: 62%;
+        height: 60%;
+    }
+    .sliders-container{
+        margin-top: 60px;
+    }
+    .pagination{
+        top: 60%;
+        left:25%;
     }
 
 
     /* 디자인 */
     .design{
+        max-width: 100%;
+        height: auto;
         overflow: visible;
     }
-    .design .box{
+    .design .design-wrap{
         width: 100%;
-        height: 100%;
+        height:1300px;
+        margin-top: 30px;
+        transform: translate(0);
     }
- 
-
+    .design .box{
+        width: 98%;
+        height: auto;
+        margin-top: 60px;
+    }   
     .design .box .box-item{
-        width: calc(100%/4);
+        width: 98%;
+        float: none;
+        margin: 0;
+        background-color: #000;
+        transform: translate(0);
     }
-
-   
-
-
+    .design .box .box-item .box-bg{
+        display: none;
+    }
+    .design .box .box-item img{
+        width: 98%;
+        height: auto;
+    }
 
     /* 컨텍트 */
+    .contact{
+        max-width: 100%;
+    }
     .contact .contact-wrap{
         width: 100%;
+        height: auto;
+        padding-bottom: 20px;
     }
-
-
+    .contact h1{
+        font-size: 60px;
+        padding-bottom: 30px;
+    }
+    .contact .circle{
+        width: 80px;
+        height: 80px;
+    }
+    .contact span{
+        font-size: 10px;
+    }
     /* top 상단으로 */
     .scrolltop{
         right: 12px;
+
     }
     .scrolltop p{
         font-size: 18px;

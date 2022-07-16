@@ -15,6 +15,8 @@ $("document").ready(function(){
              event.preventDefault(); 
            } lastTouchEnd = now; 
        }, false);
+
+
     //aos 설정
     AOS.init();
     
@@ -29,7 +31,7 @@ $("document").ready(function(){
         console.log(offset)
     }
 
-
+    // 페이지업다운 이동
     $(window).keydown(function(e){
         let Code = e.keyCode;
         console.log(Code)
@@ -54,13 +56,12 @@ $("document").ready(function(){
             },1000)
     
             $(".indicator ul li").removeClass("on").eq(wheel_count).addClass("on") 
-    
         }
     })
 
 
-//코드 적을때 반응형 부분과 둘 다 적어줘야함
-// 버그방지 = 데스크탑에서 작게 보고싶은 경우
+    //코드 적을때 반응형 부분과 둘 다 적어줘야함
+    // 버그방지 = 데스크탑에서 작게 보고싶은 경우
     $(window).resize(function(){
         let $width = $(window).width();
         if($width >= 640){
@@ -85,7 +86,6 @@ $("document").ready(function(){
                     }
                 }
         
-                
                 console.log(wheel_count)
         
                 $("html, body").stop().animate({
@@ -93,7 +93,6 @@ $("document").ready(function(){
                 },1000)
         
                 $(".indicator ul li").removeClass("on").eq(wheel_count).addClass("on") 
-        
             })
             $("html, body").css("overflow", "hidden")
         }else{
@@ -103,12 +102,14 @@ $("document").ready(function(){
         }
     })
 
-// 미디어쿼리 640px일때 코드 , else~(데스크탑버전)
+    // 미디어쿼리 640px일때 코드 , else~(데스크탑버전)
     if (window.matchMedia("(max-width: 640px)").matches) {
         
         $("html, body").css("overflow", "visible")
-        $(".indicator").css("display","none")
+
         $(window).off("mousewheel DOMMouseScroll touchmove")
+
+
       } else {
         
         $(window).on("mousewheel DOMMouseScroll", function(e){
@@ -149,7 +150,7 @@ $("document").ready(function(){
 
     // 터치스와이프
     
-    $(".indicator ul li").click(function(){
+    $(".indicator ul li, .side ul li").click(function(){
         wheel_count =$(this).index();
 
         $("html, body").stop().animate({
@@ -159,7 +160,7 @@ $("document").ready(function(){
     })
 
     // 네비
-    $(".nav .hamburger a, .side").click(function(e){
+    $(".nav .hamburger a, .side ul li").click(function(e){
         e.preventDefault()
      })
     $(".nav .hamburger a").click(function(){

@@ -23,7 +23,6 @@
     <script src="js/momentum-slider.min.js"></script>
 
     <script src="js/slick.js"></script>
-    <script src="js/momentum-slider.js"></script>
     <script src="js/momentum-slider.min.js"></script>
     <script src="js/jquery.fittext.js"></script>
     <script src="js/jquery.lettering.js"></script>
@@ -32,6 +31,7 @@
 
     <script src="js/jquery.color.min.js"></script>
     <script src="js/jquery.animateNumber.js"></script>
+    <script src="js/progressbar.min.js"></script>
  
 
     <script src="js/portfolio.js?ver=20220713"></script>
@@ -47,8 +47,9 @@
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
+            <li><a href="#">Work1</a></li>
+            <li><a href="#">Work2</a></li>
             <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Work</a></li>
             <li><a href="#">Design</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
@@ -100,25 +101,27 @@
     <div class="about-wrap">
         <div class="left">
             <p class="me">안녕하세요!<br>새로운 도전에 두려워하지 않고, 즐기며 성장하는 <span>이이슬</span>입니다 </p>
-            <img src="images/profile.png" alt="profile">
+            <img src="images/profile.jpg" alt="profile-photo">
+            <div class="keyword">
+                <ul>
+                    <li><p>이름 : 이이슬</p></li>
+                    <li><p>#꼼꼼함 #끈기</p></li>
+                    <li><p>취미 : 뜨개질</p></li>
+                    <li><p>MBTI : ISFP</p></li>
+                    <li><p>E-mail : leeedew@gmail.com</p>
+                    <li><p>생년월일 : 93. 03. 12</p></li>
+                </ul>
+                <h4>about me</h4>
+            </div>
         </div>
         <div class="right">
             <div class="profile">
                 <h3>Profile</h3>
-                <p>about me</p>
             </div>
-            <ul class="keyword">
-                <li><p>이름 : 이이슬</p></li>
-                <li><p>#꼼꼼함 #끈기</p></li>
-                <li><p>취미 : 뜨개질</p></li>
-                <li><p>MBTI : ISFP</p></li>
-                <li><p>E-mail : leeedew@gmail.com</p>
-                <li><p>생년월일 : 93. 03. 12</p></li>
-            </ul>
             <div class="introduce">
                 <ul>
-                    <li><p>상상하던 것들이 코드로 실현되는 과정에 매력을 느껴 웹디자인 &amp; 웹퍼블리셔 분야에</p></li>
-                    <li><p>문을 열게 되었습니다.</p></li>
+                    <li><p>상상하던 것들을 코드로 실현되는 과정에 매력을 느껴 </p></li>
+                    <li><p>웹디자인 &amp; 웹퍼블리셔 분야에 문을 열게 되었습니다.</p></li>
                     <li><p>사용성을 고려한 매력적인 사이트를 구현하기 위해 꾸준히 노력하고 있습니다.</p></li>
                     <br>
                     <li><p>지난 경험으로 향상시킨 커뮤니케이션과 트렌드 파악 능력과 함께</p></li>
@@ -174,20 +177,8 @@
 
 <!-- portfolio 포트폴리오-->
   <script src='https://rawgit.com/lmgonzalves/momentum-slider/master/dist/momentum-slider.min.js'></script><script  src="js/script.js"></script>
-
 <div class="container section">
-    <header class="header">
-        <h1>Publishing</h1>
-        <nav class="header__menu">
-            <ul class="header__menu__list">
-                <li class="header__menu__item"><a class="header__menu__link">myrealtrip</a></li>
-                <li class="header__menu__item"><a class="header__menu__link">kiehl's</a></li>
-                <li class="header__menu__item"><a class="header__menu__link">subway</a></li>
-                <li class="header__menu__item"><a class="header__menu__link">~cafe</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!-- Container for all sliders, and pagination -->
+    <h1>Publishing</h1>
     <main class="sliders-container">
         <!-- Here will be injected sliders for images, numbers, titles and links -->
         <!-- Simple pagination for the slider -->

@@ -1,5 +1,21 @@
 $("document").ready(function(){
-
+    
+    
+    // 화면축소X
+    document.documentElement.addEventListener('touchstart', function (event) {
+        if (event.touches.length > 1) {
+             event.preventDefault(); 
+           } 
+       }, false);
+   
+   var lastTouchEnd = 0; 
+   
+   document.documentElement.addEventListener('touchend', function (event) {
+        var now = (new Date()).getTime();
+        if (now - lastTouchEnd <= 300) {
+             event.preventDefault(); 
+           } lastTouchEnd = now; 
+       }, false);
     //aos 설정
     AOS.init();
     
@@ -94,6 +110,8 @@ $("document").ready(function(){
         $("html, body").css("overflow", "visible")
         $(".indicator").css("display","none")
         $(window).off("mousewheel DOMMouseScroll touchmove")
+
+
       } else {
         
         $(window).on("mousewheel DOMMouseScroll", function(e){
@@ -134,7 +152,7 @@ $("document").ready(function(){
 
     // 터치스와이프
     
-    $(".indicator ul li").click(function(){
+    $(".indicator ul li, .side ul li").click(function(){
         wheel_count =$(this).index();
 
         $("html, body").stop().animate({
@@ -158,7 +176,7 @@ $("document").ready(function(){
     
 
     //소개
-    const wr = document.querySelector(".keyword");
+    const wr = document.querySelector(".about .left .keyword ul");
 
     const words = wr.children;
 
@@ -175,12 +193,10 @@ $("document").ready(function(){
             const j = (start + i) % words.length;
             let percent = j / words.length;
             let rad = percent * 2 * Math.PI;
-            let ty = Math.sin(rad) * 200;
-            let tz = 40 * Math.cos(rad) - 40;
+            let y = Math.sin(rad) * 200;
+            let z = 40 * Math.cos(rad) - 40;
             let op = (Math.cos(rad) + 1) / 2;
-            words[
-            i
-            ].style.transform = `perspective(100px) translateZ(${tz}px) translateY(${ty}%)`;
+            words[i].style.transform = `perspective(100px) translateZ(${z}px) translateY(${y}%)`;
             words[i].style.opacity = `${op}`;
         }
     }   

@@ -100,8 +100,8 @@ $("document").ready(function(){
         }else{
             $(window).off("mousewheel DOMMouseScroll touchmove")
             $("html, body").css("overflow", "visible")
-
         }
+
     })
 
 // 미디어쿼리 640px일때 코드 , else~(데스크탑버전)
@@ -329,8 +329,7 @@ $("document").ready(function(){
     });
 
 
-
-    
+       
 
 
 

@@ -1,5 +1,5 @@
 $("document").ready(function(){
-
+        
     // 화면축소X
     document.documentElement.addEventListener('touchstart', function (event) {
         if (event.touches.length > 1) {
@@ -19,7 +19,48 @@ $("document").ready(function(){
 
     //aos 설정
     AOS.init();
-    
+
+    //디자인
+    $(".design").click(function(e){
+        e.preventDefault()
+     })
+
+     const $list = $(".design .design-wrap .small-box ul li")
+     const $img = $(".design .design-wrap .big-box")
+     let content_img = [
+      "images/design-1.png",
+      "images/design-2.png",
+      "images/design-3.png",
+      "images/design-4.png"
+    ]
+              
+         $list.click(function(e){
+            e.preventDefault();
+             let list_index = $(this).index();
+
+             $(".big-box img").attr("src",content_img[list_index])
+         })
+
+    $list.mouseover(function(){
+        $list.removeClass("on").stop().animate({
+            opacity:1
+        },500)
+
+        $list.not($(this)).stop().animate({
+            opacity: 0.2
+        },500)
+    })
+
+    $list.mouseout(function(){
+        if($($list).hasClass("on")){return}
+
+        $list.stop().animate({
+            opacity: 1
+        },500)
+    })
+
+
+
 
     //인디케이터
     $(".indicator ul li").eq(0).addClass("on");
@@ -31,7 +72,7 @@ $("document").ready(function(){
         console.log(offset)
     }
 
-    // 페이지업다운 이동
+    //페이지업다운
     $(window).keydown(function(e){
         let Code = e.keyCode;
         console.log(Code)
@@ -56,12 +97,12 @@ $("document").ready(function(){
             },1000)
     
             $(".indicator ul li").removeClass("on").eq(wheel_count).addClass("on") 
-        }
+        }        
     })
+ 
 
-
-    //코드 적을때 반응형 부분과 둘 다 적어줘야함
-    // 버그방지 = 데스크탑에서 작게 보고싶은 경우
+//코드 적을때 반응형 부분과 둘 다 적어줘야함
+// 버그방지 = 데스크탑에서 작게 보고싶은 경우
     $(window).resize(function(){
         let $width = $(window).width();
         if($width >= 640){
@@ -69,6 +110,7 @@ $("document").ready(function(){
                 let delta = e.originalEvent.wheelDelta;
                 let firefox = e.originalEvent.detail;
                 
+
                 if($("html, body").is(":animated")){
                     return
                 }
@@ -86,6 +128,7 @@ $("document").ready(function(){
                     }
                 }
         
+                
                 console.log(wheel_count)
         
                 $("html, body").stop().animate({
@@ -93,28 +136,30 @@ $("document").ready(function(){
                 },1000)
         
                 $(".indicator ul li").removeClass("on").eq(wheel_count).addClass("on") 
+        
             })
             $("html, body").css("overflow", "hidden")
         }else{
             $(window).off("mousewheel DOMMouseScroll touchmove")
             $("html, body").css("overflow", "visible")
-
         }
+
+        
     })
 
-    // 미디어쿼리 640px일때 코드 , else~(데스크탑버전)
+// 미디어쿼리 640px일때 코드 , else~(데스크탑버전)
     if (window.matchMedia("(max-width: 640px)").matches) {
         
         $("html, body").css("overflow", "visible")
-
+        $(".indicator").css("display","none")
         $(window).off("mousewheel DOMMouseScroll touchmove")
-
 
       } else {
         
         $(window).on("mousewheel DOMMouseScroll", function(e){
             let delta = e.originalEvent.wheelDelta;
             let firefox = e.originalEvent.detail;
+            
             
             if($("html, body").is(":animated")){
                 return
@@ -160,7 +205,7 @@ $("document").ready(function(){
     })
 
     // 네비
-    $(".nav .hamburger a, .side ul li").click(function(e){
+    $(".nav .hamburger a, .side").click(function(e){
         e.preventDefault()
      })
     $(".nav .hamburger a").click(function(){
@@ -174,7 +219,7 @@ $("document").ready(function(){
     
 
     //소개
-    const wr = document.querySelector(".keyword");
+    const wr = document.querySelector(".about .left .keyword ul");
 
     const words = wr.children;
 
@@ -191,12 +236,10 @@ $("document").ready(function(){
             const j = (start + i) % words.length;
             let percent = j / words.length;
             let rad = percent * 2 * Math.PI;
-            let ty = Math.sin(rad) * 200;
-            let tz = 40 * Math.cos(rad) - 40;
+            let y = Math.sin(rad) * 200;
+            let z = 40 * Math.cos(rad) - 40;
             let op = (Math.cos(rad) + 1) / 2;
-            words[
-            i
-            ].style.transform = `perspective(100px) translateZ(${tz}px) translateY(${ty}%)`;
+            words[i].style.transform = `perspective(100px) translateZ(${z}px) translateY(${y}%)`;
             words[i].style.opacity = `${op}`;
         }
     }   
@@ -232,9 +275,7 @@ $("document").ready(function(){
     
     (function() {
 
-        var slidersContainer = document.querySelector('.sliders-container');
-    
-        
+        var slidersContainer = document.querySelector('.sliders-container');        
         // Initializing the numbers slider
         // 이미지 숫자
         var msNumbers = new MomentumSlider({
@@ -308,8 +349,6 @@ $("document").ready(function(){
 
             //같이 슬라이드 될 요소들
             sync: [msNumbers, msTitles, msLinks],
-
-
             //슬라이드 이동할때 추가할 요소들 적기
             style: {
                 '.ms-slide__image': {
@@ -328,11 +367,20 @@ $("document").ready(function(){
         
     });
 
-
-
     
+    $(".work p").textillate({
+        loop:true,
+        in:{
+            effect: "bounceIn",
+            shuffle: true //랜덤
+        },
+        out:{
+            effect: "bounceOut",
+            shuffle: true //랜덤
+
+        }
+   })
 
 
 
-
- })
+ })   //jquery

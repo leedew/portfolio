@@ -18,7 +18,6 @@ body{font-family: 'NanumSquareRound';}
     font-style: normal;
 }
 @import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
-
  
 /* font-family: 'Jeju Gothic', sans-serif; */
 
@@ -136,15 +135,6 @@ html, body{overflow: hidden;}
     height: auto;
     margin: 0 auto;
     position: relative;
-}
-
-
-@keyframes home-scroll {
-    0%{transform: translate(-50%,0) rotate(90deg);}    
-    25%{transform: translate(-50%,-10px) rotate(90deg);}
-    50%{transform: translate(-50%,-20px) rotate(90deg);}
-    75%{transform: translate(-50%,-10px) rotate(90deg);}
-    100%{transform: translate(-50%,0px) rotate(90deg);}
 }
 
 .home .door{
@@ -268,7 +258,7 @@ to   { opacity: 0; }
 /* 오른쪽 문 */
 .home .door > .right{
     position: relative;
-    animation-name: right_move, fadeOut;
+    animation: right_move, fadeOut;
     animation-duration: 3s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: 1;
@@ -291,6 +281,13 @@ to   { right: 170px; }
     animation: home-scroll 2s infinite linear 4s;
 }
 
+@keyframes home-scroll {
+    0%{transform: translate(-50%,0) rotate(90deg);}    
+    25%{transform: translate(-50%,-10px) rotate(90deg);}
+    50%{transform: translate(-50%,-20px) rotate(90deg);}
+    75%{transform: translate(-50%,-10px) rotate(90deg);}
+    100%{transform: translate(-50%,0px) rotate(90deg);}
+}
 
 
 /* 인디케이터 */
@@ -337,10 +334,10 @@ to   { right: 170px; }
     text-align: center;
 }
 .about .left{
-    width: 620px;
+    width: 580px;
     height: 809px;
     float: left;
-    border-right: 1px solid #000;
+    border-right: 1px solid rgb(218, 218, 218);
 }
 .about .left .me{
     text-align: center;
@@ -353,7 +350,7 @@ to   { right: 170px; }
 .about .left img{
     width:300px;
     height: auto;
-    border: 1px solid rgb(98, 98, 98);
+    border: 1px solid #fff;
     position: relative;
     top: 25%;
     border-radius: 50%;
@@ -366,7 +363,6 @@ to   { right: 170px; }
     position: relative;
     left: 200px;
     top: 600px;
-    border: 1px solid #d7e6e8;
     background-color: #c3daf6;
     border-radius: 20px;
 }
@@ -394,23 +390,26 @@ to   { right: 170px; }
 }
 .about .right{
     float: left;
-    width: 620px;
+    width: 640px;
     height: 809px;
+    margin-left: 20px;
 }
 .about h3{
     padding-top: 60px;
     padding-left: 40px;
 }
 .about .right ul{
-    padding-left: 60px;
+    padding-left: 40px;
+    margin-top: 20px;
 }
 .about .right ul li{
     font-size: 14px;
 }
-
-/* .about .right .introduce{
-    margin-top: 20px;
-} */
+.about .right .introduce ul li p{
+    text-align: center;
+    right: 30px;
+    position: relative;
+}
 .about .right .about ul li{
     margin-top: 5px;
     letter-spacing: -0.6px;
@@ -422,7 +421,6 @@ to   { right: 170px; }
 .about .right .experiences ul li span{
     margin-left: 20px;
 }
-
 
 
 /* work */
@@ -468,7 +466,7 @@ to   { right: 170px; }
     animation: hover 1.5s infinite linear;
     margin-left: 90%;
     margin-bottom: 10px;
-    color: orangered;
+    color:#b1b1b4;
     background-color: #fff;
     border: 1px solid #eee;
     border-radius: 30px;
@@ -493,32 +491,38 @@ to   { right: 170px; }
     top: 23%;
     position: relative;
     /* background-color: #eee; */
-    text-align: center;
+    text-align: left;
     line-height: 30px;
     margin-left: 30px;
     padding: 30px 0;
 }
+.work .content .info h4{
+    left: 20%;
+    font-size: 24px;
+    position: relative;
+}
+.work .content .info p{
+    position: relative;
+    left: 20%;
+}
 .work span{
     position: absolute;
-    font-size: 60px;
+    font-size: 50px;
     font-family: 'Jeju Gothic', sans-serif;
     color: transparent;
-    -webkit-text-stroke: 1px rgb(198, 198, 198);
+    -webkit-text-stroke: 1px rgb(115, 115, 115);
 }
 .work .web{
-    left: 80px;
-    margin-top: 400px;
+    left: 125px;
+    margin-top:360px;
     transform: rotate(-90deg);
 }
 .work .port{
-    margin-top:86px;
-    margin-left: 60px;
+    margin-top:95px;
+    margin-left: 70px;
 }
-.work .content .info h4{
-    font-size: 20px;
-}
-.work .content .info p{
-    font-size: 18px;
+.work .content .info a{
+    margin-left:15px;
 }
 .work .content .info button{
     margin: 40px 10px;
@@ -541,26 +545,26 @@ to   { right: 170px; }
     color: #fff;
     transform: scale(1.1);
 }
-.work .content .imac .screen{
+.imac .screen{
     background: #000;
     border-radius: 3% 3% 0 0 / 5% 5% 0 0;
     position: relative;
     width: 100%;
 }
   
-.work .content .imac .screen:before{
+.imac .screen:before{
     content: "";
     display: block;
     padding-top: 60%;
 }
   
-.work .content .imac .line{
+.imac .line{
     background: linear-gradient(90deg, #A6A6AA, #E1E2E4);
     border-radius: 0 0 3% 3%/ 0 0 33.33% 33.33%;
     position: relative;
     width: 100%;
 }
-.work .content .imac .line::before {
+.imac .line::before {
     content: "";
     display: block;
     padding-top: 9%;
@@ -638,6 +642,7 @@ to   { right: 170px; }
 .ms--images .ms-track {
     display: flex;
     position: absolute;
+
 }
 .ms--images .ms-slide {
     align-items: center;
@@ -645,9 +650,13 @@ to   { right: 170px; }
     width: 700px;
     height: 500px;
 }
-.ms--images {
-    left: calc(50% - 280px);
+.ms--links .ms-track .ms-slide .ms-slide__link{
+    color: #fff;
 }
+.ms--images {
+    left: calc(50% - 250px);
+}
+
 .ms--images.ms-container--horizontal .ms-track {
     left: -70px;
 }
@@ -655,13 +664,13 @@ to   { right: 170px; }
     background-image: url("../images/myrealtrip.png");
 }
 .ms--images .ms-slide:nth-child(2) .ms-slide__image {
-    background-image: url("../images/kiehls.png");
-}
-.ms--images .ms-slide:nth-child(3) .ms-slide__image {
     background-image: url("../images/subway.png");
 }
+.ms--images .ms-slide:nth-child(3) .ms-slide__image {
+    background-image: url("../images/kiehls.png");
+}
 .ms--images .ms-slide:nth-child(4) .ms-slide__image {
-    background-image: url("../images/cafe.png");
+    background-image: url("../images/coffee.png");
 }
 .ms--images .ms-slide__image-container {
     width: 80%;
@@ -706,13 +715,13 @@ to   { right: 170px; }
     height: 240px;
     font-family: 'Hahmlet-Regular';
     font-size: 9em;
-    color: #39c0f5;
+    color: #99d6ef;
 }
 .ms--numbers .ms-slide:nth-child(2){
-    color: #fdd303;
+    color: #009223
 }
 .ms--numbers .ms-slide:nth-child(3){
-    color: #009223
+    color: #fdd303;
 }
 .ms--numbers .ms-slide:nth-child(4){
     color: #f27886;
@@ -759,9 +768,9 @@ to   { right: 170px; }
 }
 
 .ms--titles .ms-slide h3 {
-    font-size: 2.5em;
-    color: #fff;
-    text-shadow: 1px 1px 10px rgb(109, 109, 109);
+    font-size: 2em;
+    color: rgb(255, 255, 255);
+    /* text-shadow: 1px 1px 10px rgb(109, 109, 109); */
 }
 
 .ms--links {
@@ -784,9 +793,6 @@ to   { right: 170px; }
     display: flex;
     position: absolute;
     white-space: nowrap;
-    padding: 0;
-    margin: 0;
-    list-style: none;
 }
 .ms--links .ms-slide {
     align-items: center;
@@ -810,14 +816,14 @@ to   { right: 170px; }
     cursor: pointer;
 }
 .ms--links .ms-track .ms-slide:nth-child(2) .ms-slide__link{
-    border-bottom: 3px solid #fdd303;
+    border-color:  #009223;
+}
+.ms--links .ms-track .ms-slide:nth-child(3) .ms-slide__link{
+    border-color: #fdd303;
 }
 
-.ms--links .ms-track .ms-slide:nth-child(3) .ms-slide__link{
-    border-bottom: 3px solid #009223;
-}
 .ms--links .ms-track .ms-slide:nth-child(4) .ms-slide__link{
-    border-bottom: 3px solid #f27886;
+    border-color: #f27886;
 }
 .pagination {
     display: flex;
@@ -855,29 +861,20 @@ to   { right: 170px; }
 .pagination__item--active .pagination__button:after {
     opacity: 1;
 }
-  
 .container {
     position: relative;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color:#f6f6f6eb;
+    /* background-color:#f6f6f6eb; */
+    background-color: #333;
 }
-
 .container h1{
     padding-top: 30px;
     font-size: 50px;
     text-align: center;
+    color: #fff;
 }
-/* .container .container-box{
-    position: absolute;
-    right: 0;
-    top: 34%;
-    z-index: 1;
-    width: 540px;
-    height: 400px;
-    background-color: rgba(192, 192, 192, 0.516);
-} */
 .sliders-container {
     position: relative;
     display: flex;
@@ -885,18 +882,21 @@ to   { right: 170px; }
     justify-content: center;
     flex: 1;
 }
-
+.container .sliders-container button{
+    position: relative;
+    width: 100px;
+}
 
 /*디자인 작업 부분*/
 .design{
     width: 100%;
     height: 969px;
+    background-color:#f6f6f6eb;
 }
 .design .design-wrap{
     width: 1240px;
     height: 100%;
     margin: 0 auto;
-    /* background-color: #eee; */
 }
 .design h1{
     text-align: center;
@@ -904,33 +904,35 @@ to   { right: 170px; }
     font-size: 50px;
 }
 .design .big-box{
-    width: 55%;
-    height: 500px;
-    float: left;
-    border: 1px solid #333;
-    transform: translate(12%,25%);
+    width: 600px;
+    height: 400px;
+    margin-top: 50px;
+    transform: translate(50%,5%);
+
 }
 .design .big-box img{
     width: 100%;
     height: 100%;
 }
 .design .small-box{
-    float: left;
-    width: 30%;
+    width:100%;
     height: auto;
-    margin-left: 150px;
+    margin-top: 100px;
+    margin-left: 5px;
 }
-
+.design .small-box ul li{
+    float: left;
+    margin-right: 10px;
+}
+.design .small-box ul li:last-child{
+    margin-right: 0;
+}
 .design .small-box ul li img{
     width: 300px;
     height: 150px;
-    transform: translateX(12%);
-    border: 1px solid #333;
     margin-bottom: 30px;
     font-size: 0;
-}
-.design .small-box ul li:last-child img{
-    margin-bottom: 0;
+    border: 1px solid rgb(224, 224, 224);
 }
 
 /* contact */
@@ -954,8 +956,8 @@ to   { right: 170px; }
 }
 .contact p{
     text-align: center;
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 16px;
+    font-weight: 300;
 }
 .contact .circle{
     position: relative;
@@ -964,7 +966,7 @@ to   { right: 170px; }
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background: #333;
+    background-color: #000;
     margin-top: 100px;
     animation: mail 3s alternate infinite;
 }
@@ -974,7 +976,7 @@ to   { right: 170px; }
 }
 .contact .mail a{
     font-weight: bold;
-    font-size: 30px;
+    font-size: 32px;
     text-align: center;
     display: block;
     mix-blend-mode: difference;
@@ -1051,10 +1053,6 @@ to   { right: 170px; }
     font-weight: bold;
     letter-spacing: -0.8px;
 }
-
-
-
-
 
 
 @media screen and (max-width: 640px){

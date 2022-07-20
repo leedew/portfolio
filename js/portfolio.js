@@ -31,13 +31,12 @@ $("document").ready(function(){
       "images/design-1.png",
       "images/design-2.png",
       "images/design-3.png",
-      "images/design-4.png"
+      "images/hawaii-detail-page.png"
     ]
               
          $list.click(function(e){
             e.preventDefault();
              let list_index = $(this).index();
-
              $(".big-box img").attr("src",content_img[list_index])
          })
 
@@ -271,8 +270,6 @@ $("document").ready(function(){
     })
     
 
-
-    
     (function() {
 
         var slidersContainer = document.querySelector('.sliders-container');        
@@ -296,9 +293,9 @@ $("document").ready(function(){
         //이미지 제목
         var titles = [
             'MYREALTRIP',
-            'KIEHL',
             'SUBWAY',
-            'CAFE'
+            'KIEHL',
+            '커피공장'
         ];
         var msTitles = new MomentumSlider({
             el: slidersContainer,
@@ -322,7 +319,7 @@ $("document").ready(function(){
             cssClass: 'ms--links',
             range: [0, 3],
             rangeContent: function () {
-                return '<a class="ms-slide__link">자세히보기</a>';
+                return '<a class="ms-slide__link>자세히보기</a>';
             },
             vertical: true,
             interactive: false
@@ -368,19 +365,6 @@ $("document").ready(function(){
     });
 
     
-    $(".work p").textillate({
-        loop:true,
-        in:{
-            effect: "bounceIn",
-            shuffle: true //랜덤
-        },
-        out:{
-            effect: "bounceOut",
-            shuffle: true //랜덤
-
-        }
-   })
-
-
+   
 
  })   //jquery

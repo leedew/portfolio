@@ -11,7 +11,7 @@
             return '0' + i;
         },
         style: {
-            transform: [{scale: [0.4, 1]}],
+            transform: [{scale: [0.5, 1]}],
             opacity: [0, 1]
         },
         interactive: false
@@ -20,9 +20,9 @@
     // Initializing the titles slider
     var titles = [
         'MYREALTRIP',
-        'KIEHL',
         'SUBWAY',
-        'CAFE'
+        'KIEHL',
+        '커피공장'
     ];
     var msTitles = new MomentumSlider({
         el: slidersContainer,
@@ -55,6 +55,7 @@
     var pagination = document.querySelector('.pagination');
     var paginationItems = [].slice.call(pagination.children);
 
+    
     // Initializing the images slider
     var msImages = new MomentumSlider({
         // Element to append the slider
@@ -71,7 +72,8 @@
         // Styles to interpolate as we move the slider
         style: {
             '.ms-slide__image': {
-                transform: [{scale: [1.5, 1]}]
+                transform: [{scale: [1.2, 1]}],
+                opacity: [0.5, 1]               
             }
         },
         // Update pagination if slider change

@@ -28,10 +28,10 @@ $("document").ready(function(){
      const $list = $(".design .design-wrap .small-box ul li")
      const $img = $(".design .design-wrap .big-box")
      let content_img = [
-      "images/design-1.png",
+      "images/myrealtrip-logo.png",
       "images/design-2.png",
       "images/design-3.png",
-      "images/hawaii-detail-page.png"
+      "images/mainbanner-hawaii.png"
     ]
               
          $list.click(function(e){
@@ -57,8 +57,6 @@ $("document").ready(function(){
             opacity: 1
         },500)
     })
-
-
 
 
     //인디케이터
@@ -177,8 +175,6 @@ $("document").ready(function(){
                 }
             }
     
-    
-    
             console.log(wheel_count)
     
             $("html, body").stop().animate({
@@ -193,7 +189,6 @@ $("document").ready(function(){
 
 
     // 터치스와이프
-    
     $(".indicator ul li, .side ul li").click(function(){
         wheel_count =$(this).index();
 
@@ -219,7 +214,6 @@ $("document").ready(function(){
 
     //소개
     const wr = document.querySelector(".about .left .keyword ul");
-
     const words = wr.children;
 
     let x = 0;
@@ -268,7 +262,6 @@ $("document").ready(function(){
         }, 300)
         wheel_count =0;
     })
-    
 
     (function() {
 

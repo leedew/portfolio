@@ -1,0 +1,145 @@
+@charset "utf-8";
+*{margin: 0; padding: 0; font-family: 'Noto Sans KR', sans-serif;}
+ul{list-style: none;}
+a{text-decoration: none; color: #333;}
+
+@font-face {
+    font-family: 'BRBA_B';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/BRBA_B.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LeferiPoint-SpecialA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-SpecialA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+html, body{text-align: center;}
+
+h3{
+    margin-top: 140px;
+    font-family: 'LeferiPoint-SpecialA';
+    font-size: 28px;
+}
+.content{
+    z-index: 1; 
+    width: 600px; 
+    height: 250px;  
+    margin: 20px auto 0; 
+    padding-top: 100px; 
+    line-height: 50px;
+    border-radius: 35px; 
+    border: 2px solid coral; 
+    position: relative;
+}
+#a{
+    font-family: 'BRBA_B';
+    font-size: 20px;
+}
+#b{
+    font-size: 16px;
+    font-weight: bold;
+}
+#c{
+    font-size: 18px;
+}
+.hidden {display: none;}
+
+#button{
+    font-weight: 500;
+    cursor: pointer;
+    margin: 0 auto; 
+    margin-top: 30px;
+    width: 250px; 
+    height: 40px; 
+    line-height: 40px; 
+    background-color: orange;
+    border-radius: 35px;
+}
+#button::after{
+    content: "↓click";
+    position: absolute;
+    top: 42%;
+    font-size: 12px;
+    animation: click 1.5s linear infinite ;
+    color: burlywood;
+}
+
+@keyframes click {
+    0%{transform: translate(-50%,0);}    
+    25%{transform: translate(-50%,-3px);}
+    50%{transform: translate(-50%,-6px);}
+    75%{transform: translate(-50%,-3px);}
+    100%{transform: translate(-50%,0px)} 
+}
+
+input{
+    background: darkorange;
+    color:#fff;
+    border:none;
+    border-radius: 0 0 10px 10px;
+    position:relative;
+    font-size:14px;
+    padding: 10px;
+    cursor:pointer;
+    transition:600ms ease all;
+    top: -2px;
+}
+input:hover{
+    background:#fff;
+    color:darkorange;
+    border: 1px solid darkorange;
+    border-top:none;
+    font-weight: bold;
+    color: #ce8c55b0;
+}
+
+.top-bg:hover,
+.bottom-bg:hover{
+    animation: ani1 1.8s infinite linear;
+    transform-origin: 50% 0;
+}
+
+@keyframes ani1 {
+    0%{transform:  rotate(5deg);}
+    30%{transform:  rotate(-3deg);}
+    55%{transform:  rotate(3deg);}
+    75%{transform:  rotate(-3deg);}
+    100%{transform:  rotate(5deg);}
+}
+
+.name{
+    color: transparent;
+    font-size: 32px;
+    font-weight: bold;
+    -webkit-text-stroke: 1px #fff;
+    text-shadow: 1px 1px 10px rgb(245, 209, 110)
+}
+.top-bg{
+    width: 100px;
+    height: 100px;
+    /* background: url("http://via.placeholder.com/100") 0 0 no-repeat; */
+    top: 5px;
+    left: 5px;
+    position: absolute;
+    border-radius: 35px 0 0 0;
+}
+.bottom-bg{
+    width: 100px;
+    height: 100px;
+    /* background: url("http://via.placeholder.com/100") 0 0 no-repeat; */
+    bottom: 5px;
+    right: 5px;
+    position: absolute;
+    border-radius: 0px 0 35px 0;
+}
+
+@media screen and (max-width:640px) {
+    .content{width: 95%; height: 300px;}
+    #a{margin-top: 40px;}
+    #b{margin-top: 30px;}
+    #c{font-size: 16px;}
+    #button::after{top: 47%;}
+
+}

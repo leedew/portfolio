@@ -32,7 +32,7 @@ $("document").ready(function(){
       "images/myrealtrip-logo.png",
       "images/poster-thehill-mockup.png",
       "images/linebanner-mockup.png",
-      "images/linebanner-mockup.png",
+      "images/linebanner-2-mockup.png",
       "images/mainbanner-hawaii.png"
     ]
     let content_item = [

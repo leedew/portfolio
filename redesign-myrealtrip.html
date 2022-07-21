@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myrealtrip : 나다운 진짜 여행</title>
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+
+    
+    <link rel="stylesheet" href="/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/redesign-myrealtrip.css">
+
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/redesign-myrealtrip.js"></script>
+</head>
+<body>
+    
+    <!-- 사이드(상단버튼) -->
+    <div class="side-top">
+        <i class="fas fa-arrow-circle-up"></i>
+    </div>
+
+    
+    <!-- 팝업창 -->
+    <div class="popup">
+        <div class="popup-box">
+            <img src="images/myrealtrip/popup-banner.png" alt="띠배너">
+        </div>
+        <div class="popup-btn">
+            <a href="#"></a>
+        </div>
+    </div>
+
+
+    <!-- 헤더 -->
+    <div class="header">
+        <div class="header-wrap">
+            <div class="logo">
+                <a href="redesign-myrealtrip.html"><img src="images/myrealtrip/logo.png" alt="logo"></a>
+            </div>
+            <div class="search">
+                <input type="text">
+                <div class="search-btn">
+                    <input type="submit">
+                    <i class="fa-solid fa-search"></i>
+                </div>
+            </div>
+            <div class="ranking">
+                <div class="ranking-wrap">
+                    <div class="title">
+                        <h3>인기검색어</h3>
+                    </div>
+                    <div class="text swiper">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide"><a href="#">1. 제주도</a></li>
+                            <li class="swiper-slide"><a href="#">2. 하와이</a></li>
+                            <li class="swiper-slide"><a href="#">3. 파리</a></li>
+                            <li class="swiper-slide"><a href="#">4. 싱가포르</a></li>
+                            <li class="swiper-slide"><a href="#">5. 캠핑</a></li>
+                            <li class="swiper-slide"><a href="#">6. 괌</a></li>
+                            <li class="swiper-slide"><a href="#">7. 일본</a></li>
+                            <li class="swiper-slide"><a href="#">8. 방콕</a></li>
+                            <li class="swiper-slide"><a href="#">9. LA</a></li>
+                            <li class="swiper-slide"><a href="#">10. 부산</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="user">
+            <ul>
+                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                <li><a href="#">나의 정보</a></li>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">고객센터</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- 네비게이션바 -->
+    <div class="nav">
+        <div class="nav-wrap">
+            <ul>
+                <li><a href="#">해외여행</a>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="#">일본</a></li>
+                            <li><a href="#">중국</a></li>
+                            <li><a href="#">홍콩</a></li>
+                            <li><a href="#">동남아</a></li>
+                            <li><a href="#">유럽</a></li>
+                            <li><a href="#">미주</a></li>
+                            <li><a href="#">호주</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">국내여행</a>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="#">제주</a></li>
+                            <li><a href="#">서울</a></li>
+                            <li><a href="#">인천</a></li>
+                            <li><a href="#">강원</a></li>
+                            <li><a href="#">부산</a></li>
+                            <li><a href="#">충청</a></li>
+                            <li><a href="#">경상</a></li>
+                            <li><a href="#">전라</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">항공권</a>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="#">국내</a></li>
+                            <li><a href="#">해외</a></li>
+                            <li><a href="#">땡처리 항공권</a></li>
+                            <li><a href="#">특가 항공</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">숙소</a>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="#">호텔</a></li>
+                            <li><a href="#">펜션</a></li>
+                            <li><a href="#">리조트</a></li>
+                            <li><a href="#">에어비앤비</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">투어&amp;입장권</a>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="#">패키지</a></li>
+                            <li><a href="#">티켓,패스권</a></li>
+                            <li><a href="#">픽업</a></li>
+                            <li><a href="#">체험</a></li>
+                            <li><a href="#">여행 서비스</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">골프</a>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="#">국내</a></li>
+                            <li><a href="#">해외</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">허니문</a>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="#">괌</a></li>
+                            <li><a href="#">칸쿤</a></li>
+                            <li><a href="#">몰디브</a></li>
+                            <li><a href="#">사이판</a></li>
+                            <li><a href="#">제주도</a></li>
+                            <li><a href="#">하와이</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">펫과 함께</a>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="#">패키지</a></li>
+                            <li><a href="#">숙소</a></li>
+                            <li><a href="#">입장권</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">기업출장</a>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="#">항공</a></li>
+                            <li><a href="#">호텔</a></li>
+                            <li><a href="#">차량 서비스</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">이벤트</a>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="#">기간 할인</a></li>
+                            <li><a href="#">카드사 혜택</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">커뮤니티</a>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="#">여행 후기</a></li>
+                            <li><a href="#">SNS</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- 메인배너 -->
+    <div class="main-slide">
+        <div class="swiper main-content">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="images/myrealtrip/main-banner-paris.png" alt="메인배너-파리">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/myrealtrip/main-banner-turkey.jpg" alt="메인배너-터키">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/myrealtrip/main-banner-jeju.png" alt="메인배너-제주">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/myrealtrip/main-banner-singapore.jpg" alt="메인배너-싱가포르">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/myrealtrip/main-banner-hawaii.png" alt="메인배너-하와이">
+                </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+
+    <!-- 통합 검색(예약) -->
+    <div class="booking section">
+        <div class="booking-wrap">
+            <div class="tabmenu">
+                <h3>어떤 여행을 계획중이신가요?</h3>
+                <ul>
+                    <li><a href="#">항공</a></li>
+                    <li><a href="#">호텔</a></li>
+                    <li><a href="#">패키지</a></li>
+                </ul>
+            </div>
+            <div class="tab-wrap">
+                <div class="tab-content">
+                    <div class="left">
+                        <ul>
+                            <li><a href="#">왕복</a></li>
+                            <li><a href="#">편도</a></li>
+                            <li><a href="#">다구간</a></li>
+                            <li><a href="#">직항</a></li>
+                            <li><a href="#">경유</a></li>
+                        </ul>
+                    </div>
+                    <div class="right">
+                        <ul>
+                            <li><i class="fa-solid fa-location-dot"></i><input type="text" placeholder="출발지"></li>
+                            <li><i class="fa-solid fa-location-dot"></i><input type="text" placeholder="도착지"></li>
+                            <li><input type="date"></li>
+                            <li><input type="date"></li>
+                            <li><i class="fa-solid fa-user-group"></i> <select name="number" id="number">
+                                <option value="number">인원 수</option>
+                                <option value="1">1인</option>
+                                <option value="2">2인</option>
+                                <option value="3">3인</option>
+                                <option value="4">4인</option>
+                                <option value="5">5인</option>
+                            </select></li>
+                            <li><a href="#"><p>검색</p></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-content">
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot"></i><input type="text" placeholder="도시"></li>
+                        <li><input type="date"></li>
+                        <li><input type="date"></li>
+                        <li><i class="fa-solid fa-user-group"></i><select name="number" id="number">
+                            <option value="number">인원 수</option>
+                            <option value="1">1인</option>
+                            <option value="2">2인</option>
+                            <option value="2">3인</option>
+                            <option value="2">4인</option>
+                        </select></li>
+                        <li><a href="#"><p>검색</p></a></li>
+                    </ul>
+                </div>
+                <div class="tab-content">
+                    <div class="left">
+                        <ul>
+                            <li><a href="#">단체</a></li>
+                            <li><a href="#">자유</a></li>
+                        </ul>
+                    </div>
+                    <div class="right">
+                        <ul>
+                            <li><i class="fa-solid fa-location-dot"></i><input type="text" placeholder="도시"></li>
+                            <li><input type="date"></li>
+                            <li><input type="date"></li>
+                            <li><a href="#"><p>검색</p></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 사이드(콘텐츠 위치 표시)-->
+    <div class="position">
+        <p>나다운 진짜 여행으로 출발~<i class="fas fa-plane"></i></p>
+        <div class="position-wrap">
+            <div class="indicator">
+                <div class="line"></div>
+                <ul>
+                    <li><a href="#">●</a></li>
+                    <li><a href="#">●</a></li>
+                    <li><a href="#">●</a></li>
+                    <li><a href="#">●</a></li>
+                    <li><a href="#">●</a></li>
+                    <li><a href="#">●</a></li>
+                </ul>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">통합 검색</a></li>
+                    <li><a href="#">실시간 베스트 상품</a></li>
+                    <li><a href="#">언제나 좋은 국내여행</a></li>
+                    <li><a href="#">이벤트 &amp; 할인 정보</a></li>
+                    <li><a href="#">기다렸어, 나의 해외여행</a></li>
+                    <li><a href="#">여행이 돌아왔어요!</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- 사이드(내가본상품) -->
+    <div class="side-menu">
+        <div class="menu">
+            <p>내가 본 상품</p>
+            <ul>
+                <li><a href="#"><img src="images/myrealtrip/best1.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/myrealtrip/best2.png" alt=""></a></li>
+                <li><a href="#"><img src="images/myrealtrip/country2.png" alt=""></a></li>
+                <li><a href="#"><img src="images/myrealtrip/abroad3.png" alt=""></a></li>
+                <li><a href="#"><img src="images/myrealtrip/country4.png" alt=""> </a></li>
+            </ul>
+        </div>
+    </div>
+    
+
+
+    <!-- 실시간 베스트상품 -->
+    <div class="content best section">
+        <div class="content-wrap best">
+            <h3>실시간 베스트 상품</h3>
+            <div class="best-product">
+                <div class="top">
+                    <img src="images/myrealtrip/best1.jpg" alt="실시간 베스트 상품1">
+                </div>
+                <div class="bottom">
+                    <h3>[제주] 서귀포 오션뷰와 함께하는 감성 독채-</h3>
+                    <h3>후기 이벤트 진행중</h3>
+                    <p>380,000원~/4인 (세금 포함)</p>
+                </div>
+            </div>
+            <div class="best-product">
+                <div class="top">
+                    <img src="images/myrealtrip/best2.png" alt="실시간 베스트 상품2">
+                </div>
+                <div class="bottom">
+                    <h3>[제주] 표선의 아름다운 경치와 함께 멋진 라운딩</h3>
+                    <h3>(1박 2일, 조식 제공)</h3>
+                    <p>322,000원/1인 (세금 포함)</p>
+                </div>
+            </div>
+            <div class="best-product">
+                <div class="top">
+                    <img src="images/myrealtrip/best3.png" alt="실시간 베스트 상품3">
+                </div>
+                <div class="bottom">
+                    <h3>[강릉] 반려동물과 함께 안전하게 즐기는 </h3>
+                    <h3>캠핑 (반려동물 물품 구비)</h3>
+                    <p>430,000원~/2인 (세금 별도)</p>
+                </div>
+            </div>
+            <div class="best-product">
+                <div class="top">
+                    <img src="images/myrealtrip/best4.png" alt="실시간 베스트 상품4">
+                </div>
+                <div class="bottom">
+                    <h3>[시드니] 더욱 더 빛나는 비비드 시드니!</h3>
+                    <h3>낮과 밤을 온전히 즐기자</h3>
+                    <p>260,000원/2인 (세금 포함)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ 
+
+
+     <!-- 국내 -->
+    <div class="content country section">
+        <div class="content-wrap country">
+            <h3>언제나 좋은 국내여행</h3>
+            <div class="country-product">
+                <div class="top">
+                    <img src="images/myrealtrip/country1.png" alt="국내여행1-단양">
+                </div>
+                <div class="bottom">
+                    <h3>[단양] 답답한 일상에서 벗어나 아름다운 경치에</h3>
+                    <h3>다이빙</h3>
+                    <p>85,000원~/1인 (세금 포함)</p>
+                </div>
+            </div>
+            <div class="country-product">
+                <div class="top">
+                    <img src="images/myrealtrip/country2.png" alt="국내여행2-제주패스">
+                </div>
+                <div class="bottom">
+                    <h3>[제주] 제주 투어 48시간 프리패스</h3>
+                    <h3>(전 지역 사용 가능)</h3>
+                    <p>20,000원/1인 (세금 포함)</p>
+                </div>
+            </div>
+            <div class="country-product">
+                <div class="top">
+                    <img src="images/myrealtrip/country3.png" alt="국내여행3-해운대">
+                </div>
+                <div class="bottom">
+                    <h3>[부산] 부산의 낭만과 감성이 담긴 해운대 요트투</h3>
+                    <h3>어 1회 이용권</h3>
+                    <p>30,000원~/1인 (세금 별도)</p>
+                </div>
+            </div>
+            <div class="country-product">
+                <div class="top">
+                    <img src="images/myrealtrip/country4.png" alt="국내여행-경주">
+                </div>
+                <div class="bottom">
+                    <h3>[경주] 자연 속에서 별과 함께 만끽하는 1박 2일</h3>
+                    <h3>힐링 캠프</h3>
+                    <p>150,000원/1인 (세금 포함)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+    <!-- 이벤트 배너 -->
+    <div class="event-banner section">
+        <div class="banner-wrap">
+            <p>더보기</p>
+            <img src="images/myrealtrip/event-banner1.png" alt="할인 이벤트 배너">
+            <img src="images/myrealtrip/event-banner2.png" alt="호캉스 이벤트 배너">
+        </div>
+    </div>
+
+
+     <!-- 해외 -->
+     <div class="content abroad section">
+        <div class="content-wrap abroad">
+            <h3>기다렸어 나의 해외여행</h3>
+            <div class="abroad-product">
+                <div class="top">
+                    <img src="images/myrealtrip/abroad1.png" alt="해외여행1-라스베가스">
+                </div>
+                <div class="bottom">
+                    <h3>[라스베가스] 라스베가스 유명 장소 스냅</h3>
+                    <h3>촬영 투어(단독 프라이빗 투어)</h3>
+                    <p>378,073원/2인 (세금 별도)</p>
+                </div>
+            </div>
+            <div class="abroad-product">
+                <div class="top">
+                    <img src="images/myrealtrip/abroad2.png" alt="해외여행2-방콕">
+                </div>
+                <div class="bottom">
+                    <h3>[방콕] 새벽 사원 관광, 수상보트 탑승</h3>
+                    <h3>(입장권 포함, 한국인 가이드)</h3>
+                    <p>42,000원/1인 (세금 포함)</p>
+                </div>
+            </div>
+            <div class="abroad-product">
+                <div class="top">
+                    <img src="images/myrealtrip/abroad3.png" alt="해외여행3-런던">
+                </div>
+                <div class="bottom">
+                    <h3>[런던] 런던 하루 완전 정복! 효율적이고</h3>
+                    <h3>알찬 All Day 투어</h3>
+                    <p>89,000원~/1인 (세금 포함)</p>
+                </div>
+            </div>
+            <div class="abroad-product">
+                <div class="top">
+                    <img src="images/myrealtrip/abroad4.png" alt="국내여행-경주">
+                </div>
+                <div class="bottom">
+                    <h3>[하와이] 하와이 자유여행 5박 7일</h3>
+                    <h3>(대한항공 직항 + 하얏트 호텔)</h3>
+                    <p>2,450,000원/1인 (세금 포함)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- 리뷰슬라이드 -->
+    <div class="review swiper section">
+        <div class="top swiper">
+            <h3>여행이 돌아왔어요!</h3>
+        </div>
+        <div class="background swiper-wrapper">
+            <div class="swiper-slide">
+                <a href="#"><img src="images/myrealtrip/review1.jpg" alt="후기-몽생미쉘"></a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#"><img src="images/myrealtrip/review2.jpg" alt="후기-그랜드캐니언"></a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#"><img src="images/myrealtrip/review3.jpg" alt="후기-발리"></a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#"><img src="images/myrealtrip/review4.jpg" alt="후기-파리"></a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#"><img src="images/myrealtrip/review5.jpg" alt="후기-카파도키아"></a>
+            </div>
+        </div>
+    </div>
+    <div class="review-content swiper">
+        <div class="review-wrap swiper-wrapper">
+            <div class="review-item swiper-slide">
+                <a href="#">
+                    <img src="images/myrealtrip/review5.jpg" alt="후기1">
+                    <div class="review-box">
+                        <p>카파도키아에 간다면 꼭 열기구를 타세요~~~</p>
+                        <p>정말 인생 최고의 경험이 될거예요!</p>
+                        <p>시간을 잘 맞춰 탑승한다면 열기구에서 보는 일출은 정말 장관입니다.</p>
+                        <p>이런 소중한 경험을 만들어주셔서 정말 감사합니다.</p>
+                        <span>-2021년 3월 카파도키아 패키지 이용자, 김*지님</span>
+                        <span>더보기</span>
+                    </div>
+                </a>
+             </div>
+            <div class="review-item swiper-slide">
+                <a href="#">
+                 <img src="images/myrealtrip/review1.jpg" alt="후기1">
+                    <div class="review-box">
+                        <p>파리와 거리가 멀어서 어떻게 이동해야하나 걱정이였는데</p>
+                        <p>이OO 가이드님과 함께 편하게 다녀왔습니다!</p>
+                        <p>몽생미쉘의 수도원의 웅장한 자태와 주변에 끝없이</p>
+                        <p>펼쳐진 갯벌과 풍경에 눈이 즐거웠습니다!!</p>
+                        <span>-2021년 9월 몽생미쉘 원데이투어 이용자, 전*윤님</span>
+                    </div>
+                </a>
+             </div>
+            <div class="review-item swiper-slide">
+                <a href="#">
+                 <img src="images/myrealtrip/review2.jpg" alt="후기1">
+                    <div class="review-box">
+                        <p>여러분... 그랜드 캐니언 후기는 말해 뭐해요</p>
+                        <p>정말 최고입니다. 최고.</p>
+                        <p>날씨때문에 걱정했지만, 저는 날씨요정이니깐요~</p>
+                        <p>배경사진으로만 보던 모습을 실제로 보게되니</p>
+                        <p>입이 다물어지지 않았습니다...여러분 얼른 떠나세요!!</p>
+                        <span>-2022년 4월 그랜드캐니언 투어 이용자, 권*현님</span>
+                    </div>
+                </a>
+             </div>
+            <div class="review-item swiper-slide">
+                <a href="#">
+                 <img src="images/myrealtrip/review3.jpg" alt="후기1">
+                    <div class="review-box">
+                        <p>가족여행이라 큰 규모의 아OOO리조트를 선택했어요^^</p>
+                        <p>아침에 새소리를 들으며 일어나 산책, 요가도 가능하여</p>
+                        <p>정말 만족스러웠네요~ </p>
+                        <p>하지만 오래된 숙소여서 최근 리조트에 비해</p>
+                        <p>노후된 시설이 조금은 아쉬웠습니다ㅠㅠ</p>
+                        <span>-2021년 6월 발리OO리조트 이용자, 지*훈님</span>
+                    </div>
+                </a>
+             </div>
+            <div class="review-item swiper-slide">
+                <a href="#">
+                 <img src="images/myrealtrip/review4.jpg" alt="후기1">
+                    <div class="review-box">
+                        <p>낭만이 존재하는 파리!!!</p>
+                        <p>친구와 함께 감성 사진을 찍고 싶었는데 파리 시내를 투어도 하</p>
+                        <p>면서 스냅 촬영을 할 수 있어 정말 1석 2조였어요!!!</p>
+                        <p>버킷리스트였던 새벽 1시 화이트 에펠까지</p>
+                        <p>안전하게 볼 수 있게 해주셨던 박OO가이드님 정말 감사해요!</p>
+                        <span>-2020년 3월 파리 스냅 투어 이용자, 이*은님</span>
+                    </div>
+                </a>
+             </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+
+<!-- 푸터 -->
+    <div class="footer">
+        <div class="footer-wrap">
+            <div class="left">
+                <h3>고객지원실 운영안내</h3>
+                <br>
+                <ul>
+                    <li><i class="fas fa-phone"></i><span> 1670-8208</span></li>
+                    <li><i class="fas fa-message"></i><span> 1:1 채팅상담</span></li>
+                </ul>
+                <ul>
+                    <li><p>연중무휴 09:00 ~ 18:00 (점심시간 12:00 ~ 13:00)</p></li>
+                    <li><p>주말/공휴일 포함, 한국시간 기준</p></li>
+                    <li><p> ※ 항공권 환불/변경 : 평일 09:00 ~ 17:00 접수 가능</p></li>
+                </ul>
+            </div>
+            <div class="right">
+                <ul>
+                    <li><h3>소개</h3><br></li>
+                    <li><a href="#">회사 소개</a></li>
+                    <li><a href="#">채용</a></li>
+                    <li><a href="#">공고</a></li>
+                </ul>
+                <ul>
+                    <li><h3>파트너</h3><br></li>
+                    <li><a href="#">파트너 등록하기</a></li>
+                    <li><a href="#">리얼 파트너</a></li>
+                    <li><a href="#">파트너 블로그</a></li>
+                </ul>
+                <ul>
+                    <li><h3>지원</h3><br></li>
+                    <li><a href="#">자주 묻는 질문</a></li>
+                    <li><a href="#">최저가 보장제</a></li>
+                </ul>
+            </div>
+            <div class="bottom">
+                <ul>
+                    <li><a href="#">이용 약관</a></li>
+                    <li><a href="#">개인정보 처리방침</a></li>
+                    <li><a href="#">취소 및 환불 정책</a></li>
+                </ul>
+                <ul>
+                    <li>상호명 : (주)마이리얼트립 대표: 이동건 개인정보보호책임자: 정재훈 사업자등록번호:209-81-55339[사업자정보확인] 통신판매업신고번호: 2019-서울서초-0260</li>
+                    <li>주소: 서울특별시 서초구 강남대로 327, 대릉서초타워 18층(서초동)<a href="mailto:help@myrealtrip.com">이메일: help@myrealtrip.com </a>마케팅/제휴 문의: marketing@myrealtrip.com </a></li>
+                    <li><p>자사는 서울특별시관광협회 공제영업보증보험에 가입되어 있습니다. 마이리얼트립은 통신판매중개자이며 통신판매의 당사가 아닙니다. 따라서 상품-거래정보 및 거래에 대하여 책임을 지지않습니다.</p></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body> 
+</html>

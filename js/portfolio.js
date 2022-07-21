@@ -27,18 +27,23 @@ $("document").ready(function(){
 
      const $list = $(".design .design-wrap .small-box ul li")
      const $img = $(".design .design-wrap .big-box")
+     const $item = $(".design .design-wrap .item")
      let content_img = [
       "images/myrealtrip-logo.png",
-      "images/design-2.png",
-      "images/design-3.png",
+      "images/poster-thehill-mockup.png",
+      "images/linebanner-mockup.png",
+      "images/linebanner-mockup.png",
       "images/mainbanner-hawaii.png"
     ]
-              
+    let content_item = [
+
+    ]
          $list.click(function(e){
             e.preventDefault();
              let list_index = $(this).index();
              $(".big-box img").attr("src",content_img[list_index])
          })
+
 
     $list.mouseover(function(){
         $list.removeClass("on").stop().animate({
@@ -125,7 +130,6 @@ $("document").ready(function(){
                     }
                 }
         
-                
                 console.log(wheel_count)
         
                 $("html, body").stop().animate({
@@ -133,7 +137,6 @@ $("document").ready(function(){
                 },1000)
         
                 $(".indicator ul li").removeClass("on").eq(wheel_count).addClass("on") 
-        
             })
             $("html, body").css("overflow", "hidden")
         }else{
@@ -182,7 +185,6 @@ $("document").ready(function(){
             },1000)
     
             $(".indicator ul li").removeClass("on").eq(wheel_count).addClass("on") 
-    
         })
 
       }
@@ -263,99 +265,25 @@ $("document").ready(function(){
         wheel_count =0;
     })
 
-    (function() {
 
-        var slidersContainer = document.querySelector('.sliders-container');        
-        // Initializing the numbers slider
-        // 이미지 숫자
-        var msNumbers = new MomentumSlider({
-            el: slidersContainer,
-            cssClass: 'ms--numbers',
-            range: [1, 4],
-            rangeContent: function (i) {
-                return '0' + i;
-            },
-            style: {
-                transform: [{scale: [0.4, 1]}],
-                opacity: [0, 1]
-            },
-            interactive: false
-        });
-    
-        // Initializing the titles slider
-        //이미지 제목
-        var titles = [
-            'MYREALTRIP',
-            'SUBWAY',
-            'KIEHL',
-            '커피공장'
-        ];
-        var msTitles = new MomentumSlider({
-            el: slidersContainer,
-            cssClass: 'ms--titles',
-            range: [0, 3],
-            rangeContent: function (i) {
-                return '<h3>'+ titles[i] +'</h3>';
-            },
-            vertical: true,
-            reverse: true,
-            style: {
-                opacity: [0, 1]
-            },
-            interactive: false
-        });
-    
-        // Initializing the links slider
-        //자세히보기 링크
-        var msLinks = new MomentumSlider({
-            el: slidersContainer,
-            cssClass: 'ms--links',
-            range: [0, 3],
-            rangeContent: function () {
-                return '<a class="ms-slide__link>자세히보기</a>';
-            },
-            vertical: true,
-            interactive: false
-        });
-    
-        // Get pagination items
-        var pagination = document.querySelector('.pagination');
-        var paginationItems = [].slice.call(pagination.children);
-    
-        // Initializing the images slider
-        var msImages = new MomentumSlider({
-    
-            //슬라이드 추가할 요소들 적어주면됨
-            el: slidersContainer,
 
-            // CSS class to reference the slider
-            cssClass: 'ms--images',
 
-            //이미지 4개라서 0~3
-            range: [0, 3],
-            rangeContent: function () {
-                return '<div class="ms-slide__image-container"><div class="ms-slide__image"></div></div>';
-            },
 
-            //같이 슬라이드 될 요소들
-            sync: [msNumbers, msTitles, msLinks],
-            //슬라이드 이동할때 추가할 요소들 적기
-            style: {
-                '.ms-slide__image': {
-                    transform: [{scale: [1.5, 1]}]
-                }
-            }
-        });
 
-        // 버튼클릭하면 해당 슬라이드로 이동
-        pagination.addEventListener('click', function(e) {
-            if (e.target.matches('.pagination__button','.header__memu ul li')) {
-                var index = paginationItems.indexOf(e.target.parentNode);
-                msImages.select(index);
-            }
-        });
-        
-    });
+
+let popup_page = [
+    "../redesign-myrealtrip.html",
+    "../20220419-subway.html",
+    "kiehl.html",
+    "../coffee/coffee.html"
+]
+
+$(".ms-slide__link").click(function(){
+    // a(자세히 보기) 클릭 했을 때 현재 인덱스 번호가 몇번인지 
+    // 체크해서 해당 html 파일을 새창으로 뜨운다.
+    let i = $(".ms-slide__link").index(this)
+    window.open(popup_page[i])
+})
 
     
    

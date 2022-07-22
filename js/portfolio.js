@@ -27,21 +27,25 @@ $("document").ready(function(){
 
      const $list = $(".design .design-wrap .small-box ul li")
      const $img = $(".design .design-wrap .big-box")
-     const $item = $(".design .design-wrap .item")
+    //  const $item = $(".design .design-wrap .")
      let content_img = [
       "images/myrealtrip-logo.png",
       "images/poster-thehill-mockup.png",
       "images/linebanner-mockup.png",
-      "images/linebanner-2-mockup.png",
       "images/mainbanner-hawaii.png"
     ]
     let content_item = [
+        "images/myrealtrip-logo-info.png",
+        "images/poster-info.png",
+        "images/linebanner-info.png",
+        "images/hawaill-banner-info.png"
 
     ]
          $list.click(function(e){
             e.preventDefault();
              let list_index = $(this).index();
-             $(".big-box img").attr("src",content_img[list_index])
+             $(".big-box img").attr("src",content_img[list_index]),
+             $(".big-box img").eq(1).attr("src",content_item[list_index])
          })
 
 
@@ -272,8 +276,8 @@ $("document").ready(function(){
 
 
 let popup_page = [
-    "../redesign-myrealtrip.html",
-    "../20220419-subway.html",
+    "redesign-myrealtrip.html",
+    "20220419-subway.html",
     "kiehl.html",
     "../coffee/coffee.html"
 ]
